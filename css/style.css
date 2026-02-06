@@ -10,12 +10,15 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     min-height: 100%;
+    /* Offset anchor targets so fixed navbar doesn’t cover them */
+    scroll-padding-top: 80px;
 }
 body {
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 /* Footer always visible: stick to bottom when content is short, flow after content when long */
 body .site-footer {
@@ -1569,7 +1572,10 @@ img {
     }
 }
 
-/* Project slider scrollbar (optional) */
+/* Project slider – smooth scroll */
+.projects-slider {
+    scroll-behavior: smooth;
+}
 .projects-slider::-webkit-scrollbar {
     height: 8px;
 }

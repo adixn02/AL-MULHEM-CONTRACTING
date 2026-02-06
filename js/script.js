@@ -42,27 +42,35 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===================================
 // Smooth Scrolling for Anchor Links
 // ===================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+function scrollToElement(selector, options) {
+    var el = document.querySelector(selector);
+    if (el) {
+        el.scrollIntoView(Object.assign({ behavior: 'smooth', block: 'start' }, options || {}));
+    }
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
+        var href = this.getAttribute('href');
         if (href !== '#' && href !== '') {
             e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Close mobile menu if open
-                const navMenu = document.querySelector('.nav-menu');
-                if (navMenu && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                }
+            scrollToElement(href);
+            var navMenu = document.querySelector('.nav-menu');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
             }
         }
     });
 });
+
+// Smooth scroll to hash on load (e.g. from index.html#contact)
+if (window.location.hash) {
+    window.addEventListener('load', function() {
+        requestAnimationFrame(function() {
+            scrollToElement(window.location.hash);
+        });
+    });
+}
 
 // ===================================
 // Project Slider

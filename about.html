@@ -122,16 +122,8 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <p class="text-body-secondary" data-i18n="about.story.para1">Al-Mulhem Contracting Company was established with a vision to transform the construction industry through innovation, quality, and unwavering commitment to client satisfaction. From our inception in 2002, we recognized the need for a contractor that could combine technical expertise with a genuine understanding of client needs.</p>
-                    <p class="text-body-secondary">Over the years, we have evolved from a specialized contractor to a
-                        comprehensive construction solutions provider. Our journey has been marked by continuous
-                        learning, adaptation to emerging technologies, and a steadfast commitment to sustainable
-                        building practices. We've built our reputation project by project, relationship by relationship.
-                    </p>
-                    <p class="text-body-secondary mb-0">Today, Al-Mulhem stands as a trusted name in the construction
-                        industry, known for delivering complex projects on time and within budget while maintaining the
-                        highest standards of quality and safety. Our portfolio spans commercial, residential,
-                        hospitality, and infrastructure projects, each bearing the hallmark of our dedication to
-                        excellence.</p>
+                    <p class="text-body-secondary" data-i18n="about.story.para2">Over the years, we have evolved from a specialized contractor to a comprehensive construction solutions provider. Our journey has been marked by continuous learning, adaptation to emerging technologies, and a steadfast commitment to sustainable building practices. We've built our reputation project by project, relationship by relationship.</p>
+                    <p class="text-body-secondary mb-0" data-i18n="about.story.para3">Today, Al-Mulhem stands as a trusted name in the construction industry, known for delivering complex projects on time and within budget while maintaining the highest standards of quality and safety. Our portfolio spans commercial, residential, hospitality, and infrastructure projects, each bearing the hallmark of our dedication to excellence.</p>
                 </div>
                 <div class="col-lg-5">
                     <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop"
@@ -198,15 +190,15 @@
             <div class="row g-5 align-items-start">
                 <div class="col-lg-4 contact-company-details">
                     <p class="fw-bold text-dark mb-2" data-i18n="contact.company">Al-Mulhem Contracting</p>
-                    <p class="text-body-secondary mb-2">Al-Rehab Dist, St 9054<br>Jeddah, Kingdom of Saudi Arabia</p>
-                    <p class="text-body-secondary mb-2">Phone: <a href="tel:+9665666216302">+966 56 662 16302</a></p>
-                    <p class="text-body-secondary mb-0">Email: <a href="mailto:sales.riyadh@al-mulhem.com">sales.riyadh@al-mulhem.com</a></p>
-                    <p class="text-body-secondary mb-0 mt-2">Website: <a href="https://www.al-mulhem.com">www.al-mulhem.com</a></p>
+                    <p class="text-body-secondary mb-2" data-i18n="contact.address">Al-Rehab Dist, St 9054<br>Jeddah, Kingdom of Saudi Arabia</p>
+                    <p class="text-body-secondary mb-2"><span data-i18n="contact.phone_label">Phone:</span> <a href="tel:+9665666216302">+966 56 662 16302</a></p>
+                    <p class="text-body-secondary mb-0"><span data-i18n="contact.email_label">Email:</span> <a href="mailto:sales.riyadh@al-mulhem.com">sales.riyadh@al-mulhem.com</a></p>
+                    <p class="text-body-secondary mb-0 mt-2"><span data-i18n="contact.website_label">Website:</span> <a href="https://www.al-mulhem.com">www.al-mulhem.com</a></p>
                 </div>
                 <div class="col-lg-8">
                     <div class="contact-form-wrap lead-form-wrap">
                         <h3 class="lead-form-title mb-4" data-i18n="leadform.title.about">Work With Us</h3>
-                        <p class="lead-form-desc small opacity-90 mb-4">Start a conversation—we’re ready to discuss your next project.</p>
+                        <p class="lead-form-desc small opacity-90 mb-4" data-i18n="leadform.desc.about">Start a conversation—we’re ready to discuss your next project.</p>
                         <form id="contactForm" class="lead-form row g-3">
                             <input type="hidden" id="sourcePage" name="sourcePage" value="about">
                             <div class="col-md-6">
@@ -313,7 +305,7 @@
                                 <h4 class="contact-info-title text-white" data-i18n="footer.contact_info">Contact <span class="accent">INFO</span></h4>
                                 <div class="contact-info-item">
                                     <svg width="18" height="18" fill="#324A93" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                    <span>Al-Rehab Dist, St 9054, Jeddah, Kingdom of Saudi Arabia</span>
+                                    <span data-i18n="contact.address_oneline">Al-Rehab Dist, St 9054, Jeddah, Kingdom of Saudi Arabia</span>
                                 </div>
                                 <div class="contact-info-item">
                                     <a href="tel:+9665666216302" class="contact-info-phone-btn">
@@ -372,10 +364,11 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/translations.js"></script>
-    <script src="js/lang.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/lang.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/sw-register.js" defer></script>
 </body>
 
 </html>
