@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Homepage -->
     <url>
-        <loc>https://almulhem.com/index.html</loc>
+        <loc>https://www.al-mulhem.com/index.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,25 +10,25 @@
     
     <!-- Main Pages -->
     <url>
-        <loc>https://almulhem.com/about.html</loc>
+        <loc>https://www.al-mulhem.com/about.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/board.html</loc>
+        <loc>https://www.al-mulhem.com/board.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/projects.html</loc>
+        <loc>https://www.al-mulhem.com/projects.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/divisions.html</loc>
+        <loc>https://www.al-mulhem.com/divisions.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -36,37 +36,37 @@
     
     <!-- Division Sub-Pages -->
     <url>
-        <loc>https://almulhem.com/division-precast.html</loc>
+        <loc>https://www.al-mulhem.com/division-precast.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/division-waterproofing.html</loc>
+        <loc>https://www.al-mulhem.com/division-waterproofing.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/division-steel.html</loc>
+        <loc>https://www.al-mulhem.com/division-steel.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/division-landscaping.html</loc>
+        <loc>https://www.al-mulhem.com/division-landscaping.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/division-industrial.html</loc>
+        <loc>https://www.al-mulhem.com/division-industrial.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://almulhem.com/division-fitout.html</loc>
+        <loc>https://www.al-mulhem.com/division-fitout.html</loc>
         <lastmod>2026-02-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

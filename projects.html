@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#324A93">
 
     <!-- Primary SEO Meta Tags -->
     <title>Key Projects | Al-Mulhem Contracting Portfolio</title>
@@ -13,25 +14,25 @@
         content="Al-Mulhem projects, construction portfolio, commercial projects, residential towers, hospitality construction, landmark buildings">
     <meta name="author" content="Al-Mulhem Contracting">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://almulhem.com/projects.html">
+    <link rel="canonical" href="https://www.al-mulhem.com/projects.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://almulhem.com/projects.html">
+    <meta property="og:url" content="https://www.al-mulhem.com/projects.html">
     <meta property="og:title" content="Key Projects | Al-Mulhem Contracting Portfolio">
     <meta property="og:description"
         content="Explore Al-Mulhem Contracting's portfolio of landmark construction projects across the region.">
-    <meta property="og:image" content="https://almulhem.com/images/brandlogo/logo.png">
+    <meta property="og:image" content="https://www.al-mulhem.com/images/brandlogo/logo.png">
     <meta property="og:site_name" content="Al-Mulhem Contracting">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://almulhem.com/projects.html">
+    <meta name="twitter:url" content="https://www.al-mulhem.com/projects.html">
     <meta name="twitter:title" content="Key Projects | Al-Mulhem Contracting Portfolio">
     <meta name="twitter:description"
         content="Explore Al-Mulhem Contracting's portfolio of landmark construction projects across the region.">
-    <meta name="twitter:image" content="https://almulhem.com/images/brandlogo/logo.png">
+    <meta name="twitter:image" content="https://www.al-mulhem.com/images/brandlogo/logo.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/brandlogo/logo.png">
@@ -44,166 +45,168 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>(function(){var l=localStorage.getItem('siteLang')||'en';document.documentElement.lang=l==='ar'?'ar':'en';document.documentElement.dir=l==='ar'?'rtl':'ltr';})();</script>
+    <!-- BreadcrumbList Schema for SEO -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.al-mulhem.com/"},{"@type":"ListItem","position":2,"name":"Key Projects","item":"https://www.al-mulhem.com/projects.html"}]}
+    </script>
 </head>
 
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html">
-                        <h2 style="color: #1e3a8a; margin: 0;">AL-MULHEM CONTRACTING</h2>
-                    </a>
-                </div>
-                <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="board.html">OUR BOARD</a></li>
-                    <li><a href="projects.html" class="active">KEY PROJECTS</a></li>
-                    <li class="dropdown">
-                        <a href="divisions.html">SPECIALIZED DIVISIONS</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="division-precast.html">Architectural Precast Composites</a></li>
-                            <li><a href="division-waterproofing.html">Waterproofing & Concrete Repair</a></li>
-                            <li><a href="division-steel.html">Steel Fabrication & Metal Works</a></li>
-                            <li><a href="division-landscaping.html">Landscaping & Outdoor Development</a></li>
-                            <li><a href="division-industrial.html">Industrial Solutions</a></li>
-                            <li><a href="division-fitout.html">Interior Fit-Out Solutions</a></li>
+    <!-- Navigation - same as index -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold brand-logo d-flex align-items-center gap-2" href="index.html">
+                <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="navbar-logo">
+                <span class="navbar-brand-text d-none d-lg-inline">AL-MULHEM CONTRACTING</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html" data-i18n="nav.projects">KEY PROJECTS</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="divisions.html" data-bs-toggle="dropdown" data-i18n="nav.divisions">SPECIALIZED DIVISIONS</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
+                            <li><a class="dropdown-item" href="division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
+                            <li><a class="dropdown-item" href="division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
+                            <li><a class="dropdown-item" href="division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
+                            <li><a class="dropdown-item" href="division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
+                            <li><a class="dropdown-item" href="division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">CONTACT</a></li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-outline-secondary d-flex align-items-center gap-2 px-3 py-2" type="button" id="langSwitcher" data-bs-toggle="dropdown" aria-expanded="false" title="Language"><i class="bi bi-globe2" aria-hidden="true"></i><span id="langSwitcherLabel">EN</span><i class="bi bi-chevron-down small" aria-hidden="true"></i></button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langSwitcher">
+                            <li><a class="dropdown-item lang-option active" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item lang-option" href="#" data-lang="ar">العربية</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-primary px-4 py-2 ms-lg-2" href="index.html#contact" data-i18n="nav.getInTouch">Get in Touch</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-
-    <section class="page-header">
-        <div class="page-header-background">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&h=400&fit=crop"
-                alt="Projects">
         </div>
-        <div class="page-header-content">
-            <h1>KEY PROJECTS</h1>
-            <p>Excellence in Execution</p>
-        </div>
-    </section>
+    </nav>
 
-    <section class="projects-intro">
-        <div class="container">
-            <div class="intro-content">
-                <h2>Our Portfolio of Excellence</h2>
-                <p>Al-Mulhem Contracting has successfully delivered numerous landmark projects across diverse sectors.
-                    Each project in our portfolio represents our commitment to quality, innovation, and client
-                    satisfaction.</p>
-            </div>
+    <section class="page-banner position-relative">
+        <div class="page-banner-bg">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&h=400&fit=crop" alt="Key Projects">
+        </div>
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content container">
+            <h1 data-i18n="projects.banner.title">KEY PROJECTS</h1>
+            <p data-i18n="projects.banner.sub">Excellence in Execution</p>
         </div>
     </section>
 
-    <section class="project-filter">
-        <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
-                <button class="filter-btn" data-filter="hospitality">Hospitality</button>
-            </div>
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="text-center fw-bold text-dark mb-4">Our Portfolio of Excellence</h2>
+            <p class="text-center text-body-secondary col-lg-8 mx-auto">Al-Mulhem Contracting has successfully delivered numerous landmark projects across diverse sectors. Each project in our portfolio represents our commitment to quality, innovation, and client satisfaction.</p>
         </div>
     </section>
 
-    <section class="projects-grid-section">
+    <section class="py-4">
         <div class="container">
-            <div class="projects-grid">
-                <div class="project-card" data-category="commercial">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
-                            alt="Tower">
-                    </div>
-                    <div class="project-details">
-                        <h3>Financial District Tower</h3>
-                        <p class="project-type">Commercial | Office Building</p>
-                        <p class="project-description">A prestigious 45-story office tower featuring advanced GFRC
-                            facade systems and state-of-the-art building management systems.</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="hospitality">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop"
-                            alt="Hotel">
-                    </div>
-                    <div class="project-details">
-                        <h3>Luxury Hotel Complex</h3>
-                        <p class="project-type">Hospitality | 5-Star Hotel</p>
-                        <p class="project-description">An elegant hospitality development featuring intricate
-                            architectural details and premium finishes.</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="residential">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop"
-                            alt="Residential">
-                    </div>
-                    <div class="project-details">
-                        <h3>Premium Residential Towers</h3>
-                        <p class="project-type">Residential | Luxury Apartments</p>
-                        <p class="project-description">Twin towers offering luxury living with sophisticated
-                            architectural design and sustainable building practices.</p>
-                    </div>
-                </div>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">All Projects</button>
+                <button type="button" class="btn btn-outline-primary filter-btn" data-filter="commercial">Commercial</button>
+                <button type="button" class="btn btn-outline-primary filter-btn" data-filter="residential">Residential</button>
+                <button type="button" class="btn btn-outline-primary filter-btn" data-filter="hospitality">Hospitality</button>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-header">
-                <h2>Keep Up With Al-Mulhem</h2>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">
-                        <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>CONTACT</h3>
-                    <div class="office-info">
-                        <h4>Head Office</h4>
-                        <p>8357 Hail Al Baghdadiyah<br>Al Gharbiyah District<br>City 22234<br><br>Phone: +XXX XXX
-                            XXXX<br>Email: info@almulhem.com</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Inquiries</h3>
-                    <h4>Contact Us</h4>
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group"><input type="text" id="firstName" placeholder="First Name*"
-                                    required></div>
-                            <div class="form-group"><input type="text" id="lastName" placeholder="Last Name*" required>
-                            </div>
+            <div class="row g-4 projects-grid">
+                <div class="col-md-6 col-lg-4 project-card" data-category="commercial">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
+                        <div class="project-image overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" class="w-100 h-100 object-fit-cover img-zoom" alt="Financial District Tower">
                         </div>
-                        <div class="form-group"><input type="email" id="email" placeholder="Email*" required></div>
-                        <div class="form-group"><input type="text" id="subject" placeholder="Subject"></div>
-                        <div class="form-group"><textarea id="message" rows="5" placeholder="Message"></textarea></div>
-                        <button type="submit" class="btn-submit">Submit</button>
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold text-dark">Financial District Tower</h3>
+                            <p class="text-primary small fw-semibold mb-2">Commercial | Office Building</p>
+                            <p class="text-body-secondary small mb-0">A prestigious 45-story office tower featuring advanced GFRC facade systems and state-of-the-art building management systems.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-card" data-category="hospitality">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
+                        <div class="project-image overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" class="w-100 h-100 object-fit-cover img-zoom" alt="Luxury Hotel Complex">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold text-dark">Luxury Hotel Complex</h3>
+                            <p class="text-primary small fw-semibold mb-2">Hospitality | 5-Star Hotel</p>
+                            <p class="text-body-secondary small mb-0">An elegant hospitality development featuring intricate architectural details and premium finishes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-card" data-category="residential">
+                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
+                        <div class="project-image overflow-hidden" style="height: 220px;">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop" class="w-100 h-100 object-fit-cover img-zoom" alt="Premium Residential Towers">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold text-dark">Premium Residential Towers</h3>
+                            <p class="text-primary small fw-semibold mb-2">Residential | Luxury Apartments</p>
+                            <p class="text-body-secondary small mb-0">Twin towers offering luxury living with sophisticated architectural design and sustainable building practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="contact-al-mulhem-title text-center">
+                <h2>Contact Al-Mulhem</h2>
+            </div>
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-4 contact-company-details">
+                    <p class="fw-bold text-dark mb-2">Al-Mulhem Contracting</p>
+                    <p class="text-body-secondary mb-2">Al-Rehab Dist, St 9054<br>Jeddah, Kingdom of Saudi Arabia</p>
+                    <p class="text-body-secondary mb-2">Phone: <a href="tel:+9665666216302">+966 56 662 16302</a></p>
+                    <p class="text-body-secondary mb-0">Email: <a href="mailto:sales.riyadh@al-mulhem.com">sales.riyadh@al-mulhem.com</a></p>
+                    <p class="text-body-secondary mb-0 mt-2">Website: <a href="https://www.al-mulhem.com">www.al-mulhem.com</a></p>
+                </div>
+                <div class="col-lg-8">
+                    <form id="contactForm" class="row g-3">
+                        <div class="col-md-6"><input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name*" required></div>
+                        <div class="col-md-6"><input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name*" required></div>
+                        <div class="col-12"><input type="email" class="form-control" id="email" name="email" placeholder="Email*" required></div>
+                        <div class="col-12"><input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"></div>
+                        <div class="col-12"><textarea class="form-control" id="message" name="message" rows="5" placeholder="Message"></textarea></div>
+                        <div class="col-12"><button type="submit" class="btn btn-primary px-4 py-2">Submit</button></div>
                     </form>
                 </div>
             </div>
+            <div class="contact-map-wrap mt-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.5!2d39.17!3d21.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d06ebdd7810d%3A0x6e672c233d397e9!2sJeddah%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1640000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Al-Mulhem Contracting location - Jeddah"></iframe>
+            </div>
         </div>
     </section>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 Al-Mulhem Contracting. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-bottom border-top py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <p class="footer-copyright small text-body mb-0">&copy; 2015 – 2026 AL-MULHEM CONTRACTING. ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/lang.js"></script>
     <script src="js/script.js"></script>
 </body>
 

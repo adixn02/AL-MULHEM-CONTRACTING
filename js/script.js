@@ -268,7 +268,8 @@ function animateCounter(element, target, duration = 2000) {
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-            element.textContent = formatNumber(target);
+            const display = element.getAttribute('data-stat-display');
+            element.textContent = display != null && display !== '' ? display : formatNumber(target);
             clearInterval(timer);
         } else {
             element.textContent = formatNumber(Math.floor(current));
@@ -277,9 +278,6 @@ function animateCounter(element, target, duration = 2000) {
 }
 
 function formatNumber(num) {
-    if (num >= 1000) {
-        return (num / 1000).toFixed(1) + 'K+';
-    }
     return num.toString();
 }
 
@@ -289,11 +287,13 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
-                const targetText = stat.textContent;
-                let targetNum = parseInt(targetText.replace(/[^0-9]/g, ''));
-                
+                const targetText = stat.textContent.trim();
+                const targetNum = parseInt(targetText.replace(/[^0-9]/g, ''), 10);
                 if (!stat.hasAttribute('data-animated')) {
-                    animateCounter(stat, targetNum);
+                    stat.setAttribute('data-stat-display', targetText);
+                    if (!Number.isNaN(targetNum)) {
+                        animateCounter(stat, targetNum);
+                    }
                     stat.setAttribute('data-animated', 'true');
                 }
             });

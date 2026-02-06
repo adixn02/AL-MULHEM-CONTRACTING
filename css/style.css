@@ -2,7 +2,17 @@
    Al-Mulhem Contracting - Bootstrap Theme
    Brand: Primary Dark Blue #324A93, Secondary Medium Blue #7691B3
    Font: Source Sans 3 (clean modern sans-serif)
+   SEO-friendly, mobile-first responsive
    =================================== */
+
+/* Prevent horizontal overflow and improve mobile UX */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
 
 :root {
     --brand-primary: rgb(50, 74, 147);
@@ -37,6 +47,12 @@
 body {
     font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--text-dark);
+    font-size: 1rem;
+}
+@media (max-width: 576px) {
+    body {
+        font-size: 16px; /* Prevents iOS zoom on input focus */
+    }
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Sans 3', sans-serif;
@@ -77,6 +93,110 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar.sticky-top {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+#langSwitcher {
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+    font-weight: 500;
+}
+#langSwitcher:hover {
+    background: rgba(50, 74, 147, 0.08);
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+}
+.lang-option.active {
+    background: rgba(50, 74, 147, 0.1);
+    color: var(--brand-primary);
+    font-weight: 600;
+}
+/* Touch-friendly tap targets (min 44px) */
+@media (max-width: 991px) {
+    .navbar .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .navbar .btn {
+        min-height: 44px;
+        padding: 0.5rem 1rem;
+    }
+    /* Language switcher and Get in Touch: full width, clear spacing, no overlap */
+    #navbarMain .navbar-nav {
+        padding-top: 0.5rem;
+    }
+    #navbarMain .navbar-nav .nav-item.dropdown:has(#langSwitcher) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    #navbarMain .navbar-nav #langSwitcher {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+    }
+    #navbarMain .navbar-nav .nav-item:last-child {
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    #navbarMain .navbar-nav .nav-item:last-child .btn-primary {
+        width: 100%;
+        margin-left: 0 !important;
+        justify-content: center;
+        min-height: 44px;
+    }
+}
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 36px;
+    }
+    .brand-logo {
+        font-size: 1rem;
+    }
+}
+
+/* The Al-Mulhem Approach section */
+.approach-section {
+    background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+.approach-overline {
+    letter-spacing: 0.12em;
+    color: var(--brand-primary) !important;
+}
+.approach-title {
+    letter-spacing: -0.02em;
+}
+.approach-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(50, 74, 147, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.approach-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(50, 74, 147, 0.12);
+}
+.approach-card .card-body {
+    text-align: center;
+}
+.approach-card .card-body .approach-icon-wrap {
+    width: 72px;
+    height: 72px;
+    background: rgba(50, 74, 147, 0.1);
+    color: var(--brand-primary);
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.approach-card-title {
+    color: var(--text-dark);
+}
+.approach-card-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
 }
 
 /* Main hero - showroom style (below header) */
@@ -166,8 +286,155 @@ h1, h2, h3, h4, h5, h6 {
         height: 38px;
         bottom: 1rem;
     }
-    .main-carousel-prev { right: 3.5rem; }
-    .main-carousel-next { right: 0.75rem; }
+.main-carousel-prev { right: 3.5rem; }
+.main-carousel-next { right: 0.75rem; }
+}
+
+/* ========== Split Hero Section (diagonal left blue / right image) ========== */
+.hero-split {
+    position: relative;
+    height: 60vh;
+    min-height: 60vh;
+    display: flex;
+    overflow: hidden;
+}
+.hero-split-inner {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    min-height: 60vh;
+}
+.hero-split-left {
+    position: relative;
+    flex: 0 0 49%;
+    max-width: 49%;
+    background: #003399;
+    display: flex;
+    align-items: center;
+    padding: 3rem 4rem 3rem 4rem;
+  
+}
+.hero-split-pattern {
+    position: absolute;
+    inset: 0;
+    /* Construction blueprint style: cranes, scaffolding, building outlines */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='200' viewBox='0 0 280 200'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.07)' stroke-width='0.6'%3E%3Cpath d='M40 160v-120h20v120M50 40l30 80M80 40l-30 80M50 40h60M50 120h60'/%3E%3Cpath d='M140 160v-90h12v90M146 70l18 50M164 70l-18 50M146 70h36M146 120h36'/%3E%3Crect x='180' y='80' width='50' height='80'/%3E%3Cpath d='M205 80v80M180 120h50'/%3E%3Crect x='240' y='100' width='35' height='60'/%3E%3Cpath d='M257 100v60M240 130h35'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 320px 240px;
+    opacity: 0.95;
+    pointer-events: none;
+}
+.hero-split-content {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+}
+.hero-split-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+.hero-split-logo-img {
+    height: 48px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+.hero-split-logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #fff;
+    text-transform: uppercase;
+}
+.hero-split-headline {
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
+.hero-split-headline .d-block {
+    display: block;
+}
+.hero-split-year-box {
+    display: inline-block;
+    background: #2C2C2C;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.6rem 1.75rem 0.6rem 1.25rem;
+    margin-bottom: 2rem;
+    /* Simple diagonal cut on top-right corner */
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+}
+.hero-split-tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+.hero-split-right {
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+    background: #003399;
+}
+.hero-split-image {
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    /* Clip-path on image (diagonal edge where it meets the blue panel) */
+    clip-path: polygon(28% 0, 100% 0, 100% 100%, 31% 100%, 15% 33%);
+    -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 31% 100%, 15% 33%);
+}
+@media (max-width: 992px) {
+    .hero-split,
+    .hero-split-inner {
+        height: 55vh;
+        min-height: 55vh;
+    }
+    .hero-split-left {
+        flex: 0 0 65%;
+        max-width: 65%;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        padding: 2.5rem 2.5rem;
+    }
+    .hero-split-image {
+        min-height: 55vh;
+    }
+}
+@media (max-width: 768px) {
+    .hero-split,
+    .hero-split-inner {
+        height: auto;
+        min-height: auto;
+    }
+    .hero-split-inner {
+        flex-direction: column;
+    }
+    .hero-split-left {
+        flex: 0 0 auto;
+        max-width: 100%;
+        clip-path: none;
+        -webkit-clip-path: none;
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+    .hero-split-right {
+        min-height: 45vh;
+    }
+    .hero-split-image {
+        min-height: 45vh;
+        clip-path: none;
+        -webkit-clip-path: none;
+    }
 }
 
 /* Intro section - headline in main color */
@@ -251,6 +518,31 @@ h1, h2, h3, h4, h5, h6 {
     .chairman-meta h3 { font-size: 1.125rem; }
 }
 
+/* Board of Directors - compact grid cards */
+.board-director-card {
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.board-director-card:hover {
+    box-shadow: 0 8px 24px rgba(50, 74, 147, 0.12) !important;
+}
+.board-director-img-wrap {
+    height: 200px;
+    overflow: hidden;
+    background: #f1f3f5;
+}
+.board-director-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.board-director-bio {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
 /* Glass cards for Specialized Divisions */
 .divisions-section .glass-card {
     background: rgba(255,255,255,0.56);
@@ -320,6 +612,172 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 
+/* Our Partners and Clients - two rows, horizontal marquee (right-to-left like headlines) */
+.partners-clients-section .marquee-row {
+    width: 100%;
+}
+.marquee-wrap {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 40s linear infinite;
+}
+.marquee-track-clients {
+    animation-duration: 35s;
+}
+.marquee-inner {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+.partner-client-logo {
+    flex-shrink: 0;
+    width: 140px;
+    height: 80px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.partner-client-logo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.marquee-img {
+    max-width: 100%;
+    max-height: 48px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(40%);
+    opacity: 0.85;
+    transition: filter 0.25s ease, opacity 0.25s ease;
+}
+.partner-client-logo:hover .marquee-img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 768px) {
+    .partner-client-logo {
+        width: 120px;
+        height: 70px;
+        padding: 0.5rem 0.75rem;
+    }
+    .marquee-inner {
+        gap: 1rem;
+    }
+    .marquee-track {
+        animation-duration: 30s;
+    }
+    .marquee-track-clients {
+        animation-duration: 28s;
+    }
+}
+
+/* Contact section - title below blue line, small & bold */
+.contact-al-mulhem-title {
+    margin-bottom: 2rem;
+}
+.contact-al-mulhem-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+.contact-al-mulhem-line {
+    width: 100%;
+    max-width: 200px;
+    height: 4px;
+    background: var(--brand-primary);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+#contact {
+    scroll-margin-top: 5rem;
+}
+/* Contact section - company details left, form right */
+.contact-company-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+.contact-company-details a {
+    color: var(--brand-primary);
+    text-decoration: none;
+}
+.contact-company-details a:hover {
+    text-decoration: underline;
+}
+/* Contact form - brand color background, rounded corners */
+.contact-form-wrap {
+    background: var(--brand-primary);
+    padding: 1.75rem 1.75rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(50, 74, 147, 0.2);
+}
+.contact-form-wrap .form-control,
+.contact-form-wrap .form-select {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+}
+.contact-form-wrap .form-control:focus {
+    background: #fff;
+    border-color: var(--brand-primary-dark);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+.contact-form-wrap .btn-primary {
+    background: #fff;
+    color: var(--brand-primary);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.contact-form-wrap .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--brand-primary-dark);
+}
+/* Google Map full width below contact */
+.contact-map-wrap {
+    margin-top: 2.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.contact-map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 320px;
+    border: 0;
+}
+@media (min-width: 768px) {
+    .contact-map-wrap iframe {
+        height: 400px;
+    }
+}
+
 /* Form controls - focus ring brand blue */
 .form-control:focus,
 .form-select:focus {
@@ -327,12 +785,25 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 0.2rem rgba(50, 74, 147, 0.25);
 }
 
-/* Footer - multi-column */
+/* Footer - multi-column, full width */
 .site-footer {
     border-top: 1px solid #e9ecef;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.site-footer .container-fluid {
+    max-width: none !important;
+    width: 100% !important;
 }
 .footer-main {
     background-color: var(--white);
+    width: 100%;
+    max-width: 100%;
+}
+.footer-main-inner {
+    width: 100% !important;
+    max-width: none !important;
 }
 .footer-brand {
     font-family: 'Source Sans 3', sans-serif;
@@ -385,6 +856,73 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-dark);
     text-decoration: underline;
 }
+
+/* Footer: right columns use full width (no gap on right) */
+.footer-main .footer-cols-right {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Footer Contact INFO box - full details, dark style (like reference image) */
+.footer-contact-info-box {
+    background: #2d3748;
+    color: #fff;
+    padding: 1.25rem 1.25rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+}
+.footer-contact-info-box .contact-info-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+.footer-contact-info-box .contact-info-title .accent {
+    color: var(--brand-primary-hex);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.footer-contact-info-box .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.footer-contact-info-box .contact-info-item:last-child {
+    margin-bottom: 0;
+}
+.footer-contact-info-box .contact-info-item svg {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+.footer-contact-info-box .contact-info-item a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-contact-info-box .contact-info-item a:hover {
+    text-decoration: underline;
+}
+.footer-contact-info-box .contact-info-phone-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--brand-primary-hex);
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    border: none;
+    transition: background 0.2s ease;
+}
+.footer-contact-info-box .contact-info-phone-btn:hover {
+    background: var(--brand-primary-dark);
+    color: #fff;
+    text-decoration: none;
+}
 .footer-payment-icon {
     height: 28px;
     width: auto;
@@ -423,6 +961,32 @@ h1, h2, h3, h4, h5, h6 {
 .footer-social-icon:hover {
     color: var(--brand-primary);
     border-color: var(--brand-primary);
+}
+/* Footer: safe area for notched devices, responsive spacing */
+.site-footer {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+@media (max-width: 768px) {
+    .footer-main .row {
+        row-gap: 2rem;
+    }
+    .footer-heading {
+        margin-top: 0.5rem;
+    }
+    .footer-links li a,
+    .footer-phone {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+/* Tap highlight for touch devices */
+a, button {
+    -webkit-tap-highlight-color: rgba(50, 74, 147, 0.15);
+}
+/* Prevent images from overflowing on small screens */
+img {
+    max-width: 100%;
 }
 
 /* Page banner - inner pages (About, Board, Divisions, Projects, Division pages) */
@@ -480,9 +1044,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
+/* Form and button touch targets on mobile */
+@media (max-width: 576px) {
+    .btn {
+        min-height: 44px;
+        padding: 0.5rem 1rem;
+    }
+    .form-control, .form-select {
+        font-size: 16px; /* Prevents zoom on focus in iOS */
+    }
 }
 
 /* Project slider scrollbar (optional) */
