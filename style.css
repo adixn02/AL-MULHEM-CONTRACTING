@@ -1,0 +1,497 @@
+/* ===================================
+   Al-Mulhem Contracting - Bootstrap Theme
+   Brand: rgb(12, 105, 56) - Saudia-style design
+   Font: Source Sans 3 (clean modern sans-serif)
+   =================================== */
+
+:root {
+    --brand-green: rgb(12, 105, 56);
+    --brand-green-hex: #0c6938;
+    --brand-green-dark: rgb(9, 82, 44);
+    --text-dark: #333;
+    --text-muted: #6c757d;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    /* Bootstrap 5 primary = brand green */
+    --bs-primary: #0c6938;
+    --bs-primary-rgb: 12, 105, 56;
+}
+
+/* Buttons and primary elements */
+.btn-primary {
+    background-color: var(--brand-green) !important;
+    border-color: var(--brand-green) !important;
+}
+.btn-primary:hover {
+    background-color: var(--brand-green-dark) !important;
+    border-color: var(--brand-green-dark) !important;
+}
+.bg-primary { background-color: var(--brand-green) !important; }
+.border-primary { border-color: var(--brand-green) !important; }
+.text-primary { color: var(--brand-green) !important; }
+.dropdown-item:active { background-color: rgba(12, 105, 56, 0.15) !important; }
+
+/* Typography - Source Sans 3 (Saudia-style clean sans-serif) */
+body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-dark);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Logo branding color */
+.brand-logo {
+    color: var(--brand-green) !important;
+    font-size: 1.25rem;
+}
+.brand-logo:hover {
+    color: var(--brand-green-dark) !important;
+}
+.navbar-logo {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+.footer-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navbar */
+.navbar .nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--brand-green) !important;
+}
+.navbar .nav-link.active {
+    color: var(--brand-green) !important;
+}
+.navbar.sticky-top {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Main hero - showroom style (below header) */
+.main-hero {
+    height: 60vh;
+    min-height: 400px;
+}
+@media (max-width: 768px) {
+    .main-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+}
+@media (max-width: 576px) {
+    .main-hero {
+        height: 45vh;
+        min-height: 300px;
+    }
+}
+.main-hero .carousel,
+.main-hero .carousel-inner,
+.main-hero .carousel-item {
+    height: 100%;
+}
+.main-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-hero-overlay-box {
+    background: rgba(0, 0, 0, 0.65);
+    max-width: 340px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+@media (max-width: 576px) {
+    .main-hero-overlay-box {
+        max-width: calc(100% - 2rem);
+        margin: 1rem !important;
+        padding: 1rem !important;
+    }
+}
+.main-hero .carousel-control-prev,
+.main-hero .carousel-control-next {
+    z-index: 3;
+}
+.main-hero-address {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+.main-hero-overlay-box p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.main-carousel-prev,
+.main-carousel-next {
+    bottom: 1.5rem;
+    top: auto;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+}
+.main-carousel-prev { left: auto; right: 4.5rem; }
+.main-carousel-next { right: 1rem; }
+.main-carousel-prev:hover,
+.main-carousel-next:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+.main-carousel-prev .carousel-control-prev-icon,
+.main-carousel-next .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 20px;
+    height: 20px;
+}
+@media (max-width: 576px) {
+    .main-carousel-prev,
+    .main-carousel-next {
+        width: 38px;
+        height: 38px;
+        bottom: 1rem;
+    }
+    .main-carousel-prev { right: 3.5rem; }
+    .main-carousel-next { right: 0.75rem; }
+}
+
+/* Intro section - headline in main color */
+.intro-headline {
+    color: var(--brand-green) !important;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.3;
+}
+
+/* Legacy hero (if used elsewhere) */
+.hero {
+    min-height: 600px;
+}
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(12, 105, 56, 0.75), rgba(12, 105, 56, 0.5));
+    pointer-events: none;
+}
+.hero-content h1 {
+    color: var(--white) !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.scroll-arrow {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Cards - hover lift & image zoom */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+.card-hover .img-zoom {
+    transition: transform 0.3s ease;
+}
+.card-hover:hover .img-zoom {
+    transform: scale(1.08);
+}
+
+/* Board - Chairman special layout */
+.chairman-card {
+    background: linear-gradient(180deg, rgba(var(--bs-primary-rgb), 0.03), rgba(255,255,255,0));
+    border-radius: 12px;
+    padding: 1rem;
+}
+.chairman-card .chairman-inner {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.chairman-photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--white);
+    box-shadow: 0 12px 28px rgba(9,82,44,0.12);
+}
+.chairman-meta h3 {
+    font-size: 1.375rem;
+    margin-bottom: 0.25rem;
+}
+.chairman-meta .chairman-title {
+    color: var(--brand-green);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+.chairman-meta .chairman-bio {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+@media (max-width: 767px) {
+    .chairman-photo img { width: 140px; height: 140px; }
+    .chairman-meta h3 { font-size: 1.125rem; }
+}
+
+/* Glass cards for Specialized Divisions */
+.divisions-section .glass-card {
+    background: rgba(255,255,255,0.56);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 10px 30px rgba(9,82,44,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.divisions-section .glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 46px rgba(9,82,44,0.12);
+}
+.divisions-section .glass-card .card-img-top {
+    position: relative;
+}
+.divisions-section .glass-card .card-img-top::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(12,105,56,0.04), rgba(12,105,56,0.02));
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+.divisions-section .glass-card .card-body {
+    background: transparent;
+}
+.divisions-section .card-title { color: var(--text-dark); }
+.divisions-section .btn-primary {
+    background: linear-gradient(135deg,var(--brand-green),var(--brand-green-dark));
+    border-color: transparent;
+}
+
+/* Project slider overlay - green gradient */
+.project-overlay {
+    background: linear-gradient(to top, rgba(12, 105, 56, 0.9), transparent);
+}
+
+/* Materials section background */
+.materials-section {
+    background-color: rgba(12, 105, 56, 0.06);
+}
+
+/* Dependable Delivery - brand green gradient */
+.dependable-delivery {
+    background: linear-gradient(135deg, var(--brand-green), var(--brand-green-dark));
+}
+
+/* Client logos - grayscale until hover */
+.client-img {
+    max-height: 70px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.client-logo:hover .client-img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+.client-logo {
+    transition: transform 0.3s ease;
+}
+.client-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Form controls - focus ring brand green */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand-green);
+    box-shadow: 0 0 0 0.2rem rgba(12, 105, 56, 0.25);
+}
+
+/* Footer - Perini-style multi-column */
+.site-footer {
+    border-top: 1px solid #e9ecef;
+}
+.footer-main {
+    background-color: var(--white);
+}
+.footer-brand {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--brand-green) !important;
+    text-decoration: none;
+}
+.footer-brand:hover {
+    color: var(--brand-green-dark) !important;
+}
+.footer-about {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+.footer-read-more {
+    color: var(--brand-green) !important;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.footer-read-more:hover {
+    color: var(--brand-green-dark) !important;
+}
+.footer-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--brand-green) !important;
+    margin-bottom: 1rem;
+}
+.footer-address {
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-style: normal;
+}
+.footer-links li {
+    margin-bottom: 0.35rem;
+}
+.footer-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--brand-green);
+    text-decoration: underline;
+}
+.footer-phone {
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+.footer-payment-icon {
+    height: 28px;
+    width: auto;
+    margin-right: 8px;
+    object-fit: contain;
+}
+.footer-bottom {
+    background-color: var(--white);
+}
+.footer-copyright {
+    color: var(--text-dark);
+}
+.footer-sitemap {
+    color: var(--text-dark) !important;
+}
+.footer-sitemap:hover {
+    color: var(--brand-green) !important;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.footer-social-icon {
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+.footer-social-icon:hover {
+    color: var(--brand-green);
+    border-color: var(--brand-green);
+}
+
+/* Page banner - inner pages (About, Board, Divisions, Projects, Division pages) */
+.page-banner {
+    position: relative;
+    height: 40vh;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.page-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.page-banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.page-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(12, 105, 56, 0.8), rgba(12, 105, 56, 0.6));
+    z-index: 1;
+}
+.page-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+.page-banner-content h1 {
+    color: #fff !important;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+}
+.page-banner-content p {
+    margin: 0;
+    opacity: 0.95;
+    font-size: 1.1rem;
+}
+@media (max-width: 576px) {
+    .page-banner {
+        height: 35vh;
+        min-height: 240px;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Project slider scrollbar (optional) */
+.projects-slider::-webkit-scrollbar {
+    height: 8px;
+}
+.projects-slider::-webkit-scrollbar-track {
+    background: #e9ecef;
+    border-radius: 4px;
+}
+.projects-slider::-webkit-scrollbar-thumb {
+    background: var(--brand-green);
+    border-radius: 4px;
+}
