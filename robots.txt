@@ -1,0 +1,14 @@
+# Al-Mulhem Contracting - Robots.txt
+# https://almulhem.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://almulhem.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to server)
+Crawl-delay: 1
+
+# Disallow private/system directories
+Disallow: /.git/
