@@ -57,7 +57,7 @@
 
 <body>
     <!-- Navigation - same as index -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold brand-logo d-flex align-items-center gap-2" href="index.html">
                 <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="navbar-logo">
@@ -75,12 +75,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="divisions.html" data-bs-toggle="dropdown" data-i18n="nav.divisions">SPECIALIZED DIVISIONS</a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
-                            <li><a class="dropdown-item" href="division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
-                            <li><a class="dropdown-item" href="division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
-                            <li><a class="dropdown-item" href="division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
-                            <li><a class="dropdown-item" href="division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
-                            <li><a class="dropdown-item" href="division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
+                            <li><a class="dropdown-item" href="division/division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
+                            <li><a class="dropdown-item" href="division/division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
+                            <li><a class="dropdown-item" href="division/division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
+                            <li><a class="dropdown-item" href="division/division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
+                            <li><a class="dropdown-item" href="division/division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
+                            <li><a class="dropdown-item" href="division/division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">CONTACT</a></li>
@@ -142,267 +142,37 @@
     </section>
 
     <!-- Mission, Vision, Values -->
-    <section class="py-5">
+    <section class="about-mvv-section py-5">
         <div class="container py-4">
+            <h2 class="about-mvv-heading text-center mb-5">Our Mission, Vision & Values</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4 card-hover">
-                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 80px; height: 80px; font-size: 2.5rem;">🎯</div>
-                        <h3 class="h5 fw-bold text-dark">Our Mission</h3>
-                        <p class="text-body-secondary small mb-0">To deliver exceptional construction solutions that
+                    <div class="about-mvv-card card border-0 h-100 text-center p-4">
+                        <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">🎯</div>
+                        <h3 class="about-mvv-title">Our Mission</h3>
+                        <p class="about-mvv-text mb-0">To deliver exceptional construction solutions that
                             exceed client expectations through innovation, quality craftsmanship, and sustainable
                             practices. We are committed to building lasting relationships based on trust, integrity, and
                             superior performance.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4 card-hover">
-                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 80px; height: 80px; font-size: 2.5rem;">🔭</div>
-                        <h3 class="h5 fw-bold text-dark">Our Vision</h3>
-                        <p class="text-body-secondary small mb-0">To be the region's most respected and preferred
+                    <div class="about-mvv-card card border-0 h-100 text-center p-4">
+                        <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">🔭</div>
+                        <h3 class="about-mvv-title">Our Vision</h3>
+                        <p class="about-mvv-text mb-0">To be the region's most respected and preferred
                             construction partner, recognized for our innovative solutions, environmental stewardship,
                             and positive impact on the communities we serve.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 text-center p-4 card-hover">
-                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3"
-                            style="width: 80px; height: 80px; font-size: 2.5rem;">💎</div>
-                        <h3 class="h5 fw-bold text-dark">Our Values</h3>
-                        <p class="text-body-secondary small mb-0">Integrity, Excellence, Innovation, Sustainability,
+                    <div class="about-mvv-card card border-0 h-100 text-center p-4">
+                        <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">💎</div>
+                        <h3 class="about-mvv-title">Our Values</h3>
+                        <p class="about-mvv-text mb-0">Integrity, Excellence, Innovation, Sustainability,
                             Collaboration, and Safety form the foundation of everything we do. These values guide our
                             decisions, shape our culture, and define how we interact with clients, partners, and team
                             members.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership & Team (owner and key leaders) -->
-    <section class="py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-2">Our Leadership &amp; Team</h2>
-            <p class="text-center text-body-secondary mb-5">The people behind Al-Mulhem's success</p>
-            <div class="row g-4 mb-5">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden board-director-card">
-                        <div class="board-director-img-wrap" style="height: 220px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop" class="w-100 object-fit-cover" alt="Abdullah Al-Mulhem - Chairman & CEO" style="height: 100%;">
-                        </div>
-                        <div class="card-body p-3">
-                            <h3 class="h6 fw-bold text-dark mb-1">Abdullah Al-Mulhem</h3>
-                            <p class="text-primary small fw-semibold mb-2">Chairman &amp; Chief Executive Officer</p>
-                            <p class="text-body-secondary small mb-0">With over 30 years in construction, Abdullah founded Al-Mulhem with a vision to bring world-class solutions to the region.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden board-director-card">
-                        <div class="board-director-img-wrap" style="height: 220px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=400&fit=crop" class="w-100 object-fit-cover" alt="Mohammed Al-Rashid - Managing Director" style="height: 100%;">
-                        </div>
-                        <div class="card-body p-3">
-                            <h3 class="h6 fw-bold text-dark mb-1">Mohammed Al-Rashid</h3>
-                            <p class="text-primary small fw-semibold mb-2">Managing Director</p>
-                            <p class="text-body-secondary small mb-0">Oversees all operational aspects, ensuring seamless project execution and client satisfaction.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden board-director-card">
-                        <div class="board-director-img-wrap" style="height: 220px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop" class="w-100 object-fit-cover" alt="Eng. Khalid Al-Zahrani - Technical Director" style="height: 100%;">
-                        </div>
-                        <div class="card-body p-3">
-                            <h3 class="h6 fw-bold text-dark mb-1">Eng. Khalid Al-Zahrani</h3>
-                            <p class="text-primary small fw-semibold mb-2">Technical Director</p>
-                            <p class="text-body-secondary small mb-0">Leads our engineering team and drives innovation in construction methodologies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                    <h3 class="h6 fw-bold text-dark mb-3">Board &amp; Senior Management</h3>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="p-3 bg-white rounded border-start border-3 border-primary">
-                        <strong class="text-dark d-block">Fahad Al-Otaibi</strong>
-                        <span class="text-primary small">Chief Financial Officer</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="p-3 bg-white rounded border-start border-3 border-primary">
-                        <strong class="text-dark d-block">Eng. Saud Al-Ghamdi</strong>
-                        <span class="text-primary small">Director of Operations</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="p-3 bg-white rounded border-start border-3 border-primary">
-                        <strong class="text-dark d-block">Eng. Nasser Al-Dosari</strong>
-                        <span class="text-primary small">Director of Quality &amp; Safety</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="p-3 bg-white rounded border-start border-3 border-primary">
-                        <strong class="text-dark d-block">Ahmed Al-Shehri</strong>
-                        <span class="text-primary small">Senior Project Manager</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="p-3 bg-white rounded border-start border-3 border-primary">
-                        <strong class="text-dark d-block">Sarah Al-Qahtani</strong>
-                        <span class="text-primary small">Chief Architect</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="p-3 bg-white rounded border-start border-3 border-primary">
-                        <strong class="text-dark d-block">Omar Al-Jasser</strong>
-                        <span class="text-primary small">Head of Engineering</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Competencies -->
-    <section class="py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-5">Core Competencies</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <h3 class="h6 fw-bold text-primary mb-2">Technical Excellence</h3>
-                        <p class="text-body-secondary small mb-0">Our team of qualified engineers, architects, and
-                            skilled craftsmen brings deep technical knowledge to every project. We stay current with
-                            industry advancements and continuously invest in training and development.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <h3 class="h6 fw-bold text-primary mb-2">Project Management</h3>
-                        <p class="text-body-secondary small mb-0">We employ proven project management methodologies to
-                            ensure seamless execution from planning through completion. Our systematic approach
-                            minimizes risks and maximizes efficiency.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <h3 class="h6 fw-bold text-primary mb-2">Quality Assurance</h3>
-                        <p class="text-body-secondary small mb-0">Quality is embedded in every phase of our work. Our
-                            comprehensive quality management system ensures that every deliverable meets or exceeds
-                            industry standards and client specifications.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <h3 class="h6 fw-bold text-primary mb-2">Safety Leadership</h3>
-                        <p class="text-body-secondary small mb-0">Safety is our top priority. We maintain rigorous
-                            safety protocols and foster a culture where every team member is empowered to prioritize
-                            safe working practices.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <h3 class="h6 fw-bold text-primary mb-2">Innovation</h3>
-                        <p class="text-body-secondary small mb-0">We embrace new technologies and methodologies that
-                            enhance project outcomes. From advanced materials to digital construction tools, we leverage
-                            innovation to deliver superior results.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <h3 class="h6 fw-bold text-primary mb-2">Sustainability</h3>
-                        <p class="text-body-secondary small mb-0">Environmental responsibility guides our operations. We
-                            implement sustainable practices that reduce environmental impact while delivering long-term
-                            value for our clients.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="py-5">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-4">Certifications & Standards</h2>
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8">
-                    <p class="text-body-secondary">Al-Mulhem Contracting maintains the highest industry certifications
-                        and adheres to international standards. Our commitment to quality and safety is validated
-                        through:</p>
-                    <ul class="text-body-secondary">
-                        <li>ISO 9001:2015 - Quality Management Systems</li>
-                        <li>ISO 14001:2015 - Environmental Management Systems</li>
-                        <li>ISO 45001:2018 - Occupational Health and Safety Management</li>
-                        <li>Industry-specific certifications and accreditations</li>
-                        <li>Regular third-party audits and compliance reviews</li>
-                    </ul>
-                    <p class="text-body-secondary mb-0">These certifications reflect our systematic approach to managing
-                        quality, environmental impact, and workplace safety across all our operations.</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/ISO_9001_icon.svg/200px-ISO_9001_icon.svg.png"
-                        alt="ISO 9001" class="img-fluid" style="max-height: 120px;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Al-Mulhem -->
-    <section class="py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-5">Why Choose Al-Mulhem</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <div class="text-primary fw-bold fs-4 mb-2">01</div>
-                        <h3 class="h6 fw-bold text-dark">Proven Track Record</h3>
-                        <p class="text-body-secondary small mb-0">Years of successful project delivery across diverse
-                            sectors demonstrate our capability to handle projects of any scale and complexity.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <div class="text-primary fw-bold fs-4 mb-2">02</div>
-                        <h3 class="h6 fw-bold text-dark">Client-Centric Approach</h3>
-                        <p class="text-body-secondary small mb-0">We prioritize understanding your unique needs and
-                            objectives, tailoring our solutions to deliver maximum value for your investment.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <div class="text-primary fw-bold fs-4 mb-2">03</div>
-                        <h3 class="h6 fw-bold text-dark">Integrated Services</h3>
-                        <p class="text-body-secondary small mb-0">Our comprehensive range of specialized divisions
-                            allows us to serve as your single-source solution for complex, multi-faceted projects.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <div class="text-primary fw-bold fs-4 mb-2">04</div>
-                        <h3 class="h6 fw-bold text-dark">Innovation & Technology</h3>
-                        <p class="text-body-secondary small mb-0">We leverage cutting-edge technologies and innovative
-                            construction methods to enhance efficiency, quality, and sustainability.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <div class="text-primary fw-bold fs-4 mb-2">05</div>
-                        <h3 class="h6 fw-bold text-dark">Local Expertise</h3>
-                        <p class="text-body-secondary small mb-0">Deep understanding of regional requirements,
-                            regulations, and market conditions ensures smooth project execution and compliance.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 p-4">
-                        <div class="text-primary fw-bold fs-4 mb-2">06</div>
-                        <h3 class="h6 fw-bold text-dark">Sustainable Practices</h3>
-                        <p class="text-body-secondary small mb-0">Our commitment to environmental stewardship helps you
-                            achieve sustainability goals while reducing long-term operational costs.</p>
                     </div>
                 </div>
             </div>
@@ -477,11 +247,11 @@
                         <div class="col-6 col-lg-2 col-md-4">
                             <h4 class="footer-heading">INFO</h4>
                             <ul class="footer-links list-unstyled small mb-0">
-                                <li><a href="#">Delivery &amp; Info</a></li>
-                                <li><a href="#">Resources</a></li>
-                                <li><a href="#">Website Terms of Use</a></li>
-                                <li><a href="#">Terms of Trade</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="delivery-info.html">Delivery &amp; Info</a></li>
+                                <li><a href="resources.html">Resources</a></li>
+                                <li><a href="terms-of-use.html">Website Terms of Use</a></li>
+                                <li><a href="terms-of-trade.html">Terms of Trade</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
                                 <li><a href="about.html">About Us</a></li>
                             </ul>
                         </div>
@@ -489,11 +259,11 @@
                             <h4 class="footer-heading">OUR DIVISIONS</h4>
                             <ul class="footer-links list-unstyled small mb-0">
                                 <li><a href="divisions.html">All Divisions</a></li>
-                                <li><a href="division-precast.html">Precast Composites</a></li>
-                                <li><a href="division-waterproofing.html">Waterproofing</a></li>
-                                <li><a href="division-steel.html">Steel &amp; Metal</a></li>
-                                <li><a href="division-landscaping.html">Landscaping</a></li>
-                                <li><a href="division-fitout.html">Interior Fit-Out</a></li>
+                                <li><a href="division/division-precast.html">Precast Composites</a></li>
+                                <li><a href="division/division-waterproofing.html">Waterproofing</a></li>
+                                <li><a href="division/division-steel.html">Steel &amp; Metal</a></li>
+                                <li><a href="division/division-landscaping.html">Landscaping</a></li>
+                                <li><a href="division/division-fitout.html">Interior Fit-Out</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-lg-2 col-md-4">

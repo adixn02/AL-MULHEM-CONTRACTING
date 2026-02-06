@@ -126,7 +126,7 @@
 
 <body>
     <!-- Navigation Header - Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold brand-logo d-flex align-items-center gap-2" href="index.html">
                 <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="navbar-logo">
@@ -144,12 +144,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="divisions.html" data-bs-toggle="dropdown" data-i18n="nav.divisions">SPECIALIZED DIVISIONS</a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
-                            <li><a class="dropdown-item" href="division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
-                            <li><a class="dropdown-item" href="division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
-                            <li><a class="dropdown-item" href="division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
-                            <li><a class="dropdown-item" href="division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
-                            <li><a class="dropdown-item" href="division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
+                            <li><a class="dropdown-item" href="division/division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
+                            <li><a class="dropdown-item" href="division/division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
+                            <li><a class="dropdown-item" href="division/division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
+                            <li><a class="dropdown-item" href="division/division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
+                            <li><a class="dropdown-item" href="division/division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
+                            <li><a class="dropdown-item" href="division/division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">CONTACT</a></li>
@@ -251,7 +251,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title h6 fw-bold text-dark" data-i18n="index.div.precast">Architectural Precast Composites<br>(GFRC - UHPC - FRP - GRG)</h3>
-                            <a href="division-precast.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
+                            <a href="division/division-precast.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +263,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title h6 fw-bold text-dark" data-i18n="index.div.waterproofing">Waterproofing & Concrete Repair<br>(Building Rehabilitation)</h3>
-                            <a href="division-waterproofing.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
+                            <a href="division/division-waterproofing.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +275,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title h6 fw-bold text-dark" data-i18n="index.div.steel">Steel Fabrication & Metal Works<br>(Light and Medium)</h3>
-                            <a href="division-steel.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
+                            <a href="division/division-steel.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -287,7 +287,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title h6 fw-bold text-dark" data-i18n="index.div.fitout">Interior Fit-Out Solutions</h3>
-                            <a href="division-fitout.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
+                            <a href="division/division-fitout.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -299,7 +299,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title h6 fw-bold text-dark" data-i18n="index.div.landscaping">Landscaping & Outdoor Development</h3>
-                            <a href="division-landscaping.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
+                            <a href="division/division-landscaping.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -311,7 +311,7 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title h6 fw-bold text-dark" data-i18n="index.div.industrial">Industrial GRP</h3>
-                            <a href="division-industrial.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
+                            <a href="division/division-industrial.html" class="btn btn-primary mt-2" data-i18n="index.learn_more">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -385,160 +385,274 @@
         </div>
     </section>
 
-    <!-- Specialized Products -->
-    <section class="py-5">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-5" data-i18n="index.section.products">ARCHITECTURAL SPECIALIZED PRODUCTS</h2>
-            <div class="row g-4">
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_637d68d55ef545c097c58e7b5957d728~mv2.jpeg/v1/crop/x_0,y_135,w_750,h_562/fill/w_383,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mekka%20hotel%20project.jpeg"
-                            class="card-img-top object-fit-cover img-zoom" alt="Fabricated Facades"
-                            style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.facades">Fabricated Facades</h3>
+    <!-- Our Services – 70vh slider: image left, content right -->
+    <section class="services-slider-section" id="our-services">
+        <h2 class="services-section-heading">Our Services</h2>
+        <div id="servicesCarousel" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="6000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/steelsolutions.png" alt="Steel Fabrication Solutions" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Steel Fabrication <span class="highlight">SOLUTIONS</span></h2>
+                                    <ul class="services-slide-list">
+                                        <li>Cutting</li>
+                                        <li>Metal Stamping</li>
+                                        <li>Welding</li>
+                                        <li>Extrusion</li>
+                                        <li>Forging</li>
+                                        <li>Casting</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_f0a2b715d706477b9056755c05b49f4e~mv2.jpg/v1/crop/x_0,y_277,w_821,h_605/fill/w_391,h_288,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/475332240_1366167098162869_8840478622109919354_n.jpg"
-                            class="card-img-top object-fit-cover img-zoom" alt="3D Printing" style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.3d">3D Printing</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/Outdoor &amp; Indoor Si gnages.png" alt="Outdoor &amp; Indoor Signages" loading="lazy" >
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Outdoor &amp; Indoor <span class="highlight">SIGNAGES</span></h2>
+                                    <p class="services-slide-desc">We provide an extensive selection of products tailored to meet the unique requirements of our clients. Our expertise lies in delivering and installing both indoor and outdoor signage solutions.</p>
+                                    <ul class="services-slide-list">
+                                        <li>Design Consultancy</li>
+                                        <li>Graphic Design</li>
+                                        <li>Internal &amp; External Signages</li>
+                                        <li>Branding</li>
+                                        <li>Exhibition Stands</li>
+                                        <li>Wayfinding Signages</li>
+                                        <li>Traffic Signages</li>
+                                        <li>Road Marking</li>
+                                        <li>ACP Cladding</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_9182e85f9c234f359f06711b8ae83506~mv2.jpeg/v1/fill/w_383,h_287,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202025-01-02%20at%2012_28_43%20PM%20(3).jpeg"
-                            class="card-img-top object-fit-cover img-zoom" alt="Perforated Screens"
-                            style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.screens">Perforated Screens</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/soundsolution.png" alt="Sound Acoustic Solution" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Sound Acoustic <span class="highlight">SOLUTION</span></h2>
+                                    <p class="services-slide-desc">Comprehensive sound and acoustic solutions to enhance audio clarity, reduce noise levels, and improve environmental comfort for commercial, institutional, and public spaces.</p>
+                                    <ul class="services-slide-list">
+                                        <li>Acoustic Wall Panels</li>
+                                        <li>Ceiling Baffles</li>
+                                        <li>Sound Insulation Systems</li>
+                                        <li>Noise Barriers</li>
+                                        <li>Vibration Control</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_6ff52b5c29cc4b9e8bf30fa94badbcdf~mv2.jpg/v1/crop/x_0,y_186,w_960,h_907/fill/w_383,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1a%20(5)_edited.jpg"
-                            class="card-img-top object-fit-cover img-zoom" alt="Boulders & Rocks"
-                            style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.boulders">Boulders & Rocks</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/terazo.png" alt="Terrazzo Tiles" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Terrazzo <span class="highlight">TILES</span></h2>
+                                    <p class="services-slide-desc">High-quality terrazzo tile solutions combining durability, aesthetics, and long-term performance for commercial and high-traffic areas.</p>
+                                    <ul class="services-slide-list">
+                                        <li>Design Coordination</li>
+                                        <li>Material Selection</li>
+                                        <li>Precise Installation</li>
+                                        <li>Flawless Finishing</li>
+                                        <li>Wear Resistance</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_6028d5055c0c401bab3ea03781629b0d~mv2.png/v1/crop/x_175,y_0,w_1319,h_1254/fill/w_383,h_364,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202025-02-03%20at%205_45_21%20PM.png"
-                            class="card-img-top object-fit-cover img-zoom" alt="Rammed Earth" style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.rammed">Rammed Earth Walls</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/advancemanufacturing.png" alt="Advanced Manufacturing" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Advanced <span class="highlight">MANUFACTURING</span></h2>
+                                    <p class="services-slide-desc">State-of-the-art production facility with advanced machinery for precision, efficiency, and superior quality. In-house control from cutting to finishing.</p>
+                                    <ul class="services-slide-list">
+                                        <li>CNC Laser Cutting Machine</li>
+                                        <li>Vinyl Plotter/Cutter</li>
+                                        <li>Digital UV Flatbed Printer</li>
+                                        <li>Lamination &amp; Mounting Equipment</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_2d5f5b561fa94b69b0f39d1ea1d51a3e~mv2.png/v1/crop/x_61,y_0,w_942,h_890/fill/w_383,h_362,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202025-02-03%20at%205_48_26%20PM.png"
-                            class="card-img-top object-fit-cover img-zoom" alt="Digital Art" style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.digital">Digital Art & Various Prints</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/digitalsolutions.png" alt="Digital Signage Solutions" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Digital Signage <span class="highlight">SOLUTIONS</span></h2>
+                                    <ul class="services-slide-list">
+                                        <li>LED Video Walls</li>
+                                        <li>Indoor LED Screens</li>
+                                        <li>Outdoor LED Screens</li>
+                                        <li>Digital Kiosk</li>
+                                        <li>Portable LED Screens</li>
+                                        <li>Control System</li>
+                                        <li>Cloud System Solution</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_8e4a7926313f464faeb40fef49b62adb~mv2.jpeg/v1/crop/x_165,y_0,w_1270,h_1200/fill/w_383,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/N2%20(3).jpeg"
-                            class="card-img-top object-fit-cover img-zoom" alt="Planters" style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.planters">Planters</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/civilsolutions.png" alt="Civil Solutions" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Civil <span class="highlight">SOLUTIONS</span></h2>
+                                    <p class="services-slide-desc">Construction accessories and building support materials for structural integrity, durability, and quality finishes across civil, industrial, and infrastructure sectors.</p>
+                                    <ul class="services-slide-list">
+                                        <li>Expanded Metals, Plaster Beads</li>
+                                        <li>Block Ladder, Reinforcements</li>
+                                        <li>Steel Lintels &amp; Block Work Accessories</li>
+                                        <li>Bituminous Protective Primers</li>
+                                        <li>Concrete Accessories</li>
+                                        <li>Geosynthetics</li>
+                                        <li>PVC Waterstop</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_2141626527ec446ea5e928653b531201~mv2.jpeg/v1/crop/x_86,y_0,w_428,h_407/fill/w_383,h_364,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202021-06-17%20at%2012_23_16%20PM%20(9).jpeg"
-                            class="card-img-top object-fit-cover img-zoom" alt="Benches" style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.benches">Benches</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/mepsultions.png" alt="MEP Solutions" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>MEP <span class="highlight">SOLUTIONS</span></h2>
+                                    <ul class="services-slide-list">
+                                        <li>Cable Management Systems — Cable Trays &amp; Accessories, Cable Ladders, Trunking, FRP Cable</li>
+                                        <li>HVAC Systems</li>
+                                        <li>Piping Systems</li>
+                                        <li>Lighting Systems</li>
+                                        <li>Power Distribution</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-0 shadow-sm h-100 overflow-hidden card-hover">
-                        <img src="https://static.wixstatic.com/media/ea3b8b_467123a8900440338e4ad5c658f685cc~mv2.jpeg/v1/crop/x_0,y_149,w_768,h_726/fill/w_383,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202021-02-06%20at%2012_32_18%20AM.jpeg"
-                            class="card-img-top object-fit-cover img-zoom" alt="Flooring Tiles" style="height: 200px;">
-                        <div class="card-body py-3">
-                            <h3 class="card-title h6 fw-bold text-dark mb-0 text-center" data-i18n="index.product.flooring">Flooring Tiles</h3>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/roadmarkings.png" alt="Road Markings" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Road <span class="highlight">MARKINGS</span></h2>
+                                    <p class="services-slide-desc">High-quality application of road markings for safety, visibility, and compliance with national and international traffic regulations.</p>
+                                    <ul class="services-slide-list">
+                                        <li>Center Line Markings</li>
+                                        <li>Edge Line Markings</li>
+                                        <li>Pedestrian Crossings (Zebra)</li>
+                                        <li>Lane Markings</li>
+                                        <li>Speed Breaker Markings</li>
+                                        <li>Parking Bay Markings</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row services-slide-row h-100 align-items-stretch">
+                            <div class="col-12 col-lg-6 h-100">
+                                <div class="services-slide-img-wrap">
+                                    <img src="Images/services/Traff i c Si gnages.png" alt="Traffic Signages" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <div class="services-slide-content">
+                                    <h2>Traffic <span class="highlight">SIGNAGES</span></h2>
+                                    <p class="services-slide-desc">Comprehensive manufacturer of traffic signages for road safety and traffic management through precision engineering and durable materials.</p>
+                                    <ul class="services-slide-list">
+                                        <li>Regulatory Signs</li>
+                                        <li>Warning Signs</li>
+                                        <li>Guide Signs</li>
+                                        <li>Temporary/Work Zone Signs</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Materials Section -->
-    <section class="py-5 materials-section">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-4" data-i18n="index.section.materials">At Al-Mulhem, we craft your vision using the highest quality MATERIALS available.</h2>
-            <ul class="row g-3 list-unstyled justify-content-center">
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.gfrc">GFRC: Glass Fiber Reinforced Concrete</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.grp">GRP: Glass Fiber Reinforced Polymer</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.grg">GRG: Glass Fiber Reinforced Gypsum</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.metal">Fabrication & Casting Metal (Bronze, Brass, Aluminum)</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.marble">Artistic Marble</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.timber">Cross Laminated Timber (Wood)</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.glass">Artistic Casted Glass</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.ceramic">Artistic Ceramic</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.rammed">Rammed Earth</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.stone">Stone (Natural Stone, Granite, etc.)</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.fiber">Fiber Optic Lighting</div>
-                </li>
-                <li class="col-md-6 col-lg-4">
-                    <div class="p-3 bg-white rounded border-start border-4 border-primary" data-i18n="index.material.honeycomb">Honeycomb Paneling</div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Contractor of Choice -->
-    <section class="py-5 bg-light">
-        <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-5" data-i18n="index.section.contractor">Your Contractor of Choice</h2>
-            <div class="row align-items-center g-4 mb-5">
-                <div class="col-lg-6">
-                    <p class="text-body-secondary mb-0" data-i18n="index.contractor.para">It takes more than a low price and typical promises to become the Contractor of Choice. Saying your company offers quick, friendly and trustworthy service is not impressive when every other business makes similar promises. Customers do not listen much to what you say. They watch what you do. It requires a tailored business model, one where Al-Mulhem has succeeded to offer individual solutions to individual clients.</p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&h=500&fit=crop"
-                        alt="Quality construction and building excellence - Al-Mulhem Contracting" class="rounded shadow w-100" loading="lazy" decoding="async">
-                </div>
-            </div>
-            <div class="bg-white rounded shadow-sm p-4 p-lg-5 text-center mx-auto" style="max-width: 900px;">
-                <p class="mb-2 text-body-secondary" data-i18n="index.sustainability.para">We strive to meet the needs of the world today without jeopardizing the needs of the world tomorrow.</p>
-                <p class="mb-0 text-body-secondary" data-i18n="index.experts.para">Our expert teams are selected specifically for each client, and they are highly trained, using ingenuity to solve problems creatively.</p>
+            <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev" aria-label="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next" aria-label="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Steel"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1" aria-label="Signages"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2" aria-label="Sound"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3" aria-label="Terrazzo"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="4" aria-label="Manufacturing"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="5" aria-label="Digital"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="6" aria-label="Civil"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="7" aria-label="MEP"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="8" aria-label="Road Markings"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="9" aria-label="Traffic"></button>
             </div>
         </div>
     </section>
@@ -758,11 +872,11 @@
                         <div class="col-6 col-md-4 col-lg-2">
                             <h4 class="footer-heading" data-i18n="footer.info">INFO</h4>
                             <ul class="footer-links list-unstyled small mb-0">
-                                <li><a href="#" data-i18n="footer.delivery">Delivery & Info</a></li>
-                                <li><a href="#" data-i18n="footer.resources">Resources</a></li>
-                                <li><a href="#" data-i18n="footer.terms_use">Website Terms of Use</a></li>
-                                <li><a href="#" data-i18n="footer.terms_trade">Terms of Trade</a></li>
-                                <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+                                <li><a href="delivery-info.html" data-i18n="footer.delivery">Delivery & Info</a></li>
+                                <li><a href="resources.html" data-i18n="footer.resources">Resources</a></li>
+                                <li><a href="terms-of-use.html" data-i18n="footer.terms_use">Website Terms of Use</a></li>
+                                <li><a href="terms-of-trade.html" data-i18n="footer.terms_trade">Terms of Trade</a></li>
+                                <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
                                 <li><a href="about.html" data-i18n="footer.about_us">About Us</a></li>
                             </ul>
                         </div>
@@ -770,11 +884,11 @@
                             <h4 class="footer-heading" data-i18n="footer.divisions">OUR DIVISIONS</h4>
                             <ul class="footer-links list-unstyled small mb-0">
                                 <li><a href="divisions.html" data-i18n="footer.all_divisions">All Divisions</a></li>
-                                <li><a href="division-precast.html" data-i18n="footer.precipast">Precast Composites</a></li>
-                                <li><a href="division-waterproofing.html" data-i18n="footer.waterproofing">Waterproofing</a></li>
-                                <li><a href="division-steel.html" data-i18n="footer.steel">Steel & Metal</a></li>
-                                <li><a href="division-landscaping.html" data-i18n="footer.landscaping">Landscaping</a></li>
-                                <li><a href="division-fitout.html" data-i18n="footer.fitout">Interior Fit-Out</a></li>
+                                <li><a href="division/division-precast.html" data-i18n="footer.precipast">Precast Composites</a></li>
+                                <li><a href="division/division-waterproofing.html" data-i18n="footer.waterproofing">Waterproofing</a></li>
+                                <li><a href="division/division-steel.html" data-i18n="footer.steel">Steel & Metal</a></li>
+                                <li><a href="division/division-landscaping.html" data-i18n="footer.landscaping">Landscaping</a></li>
+                                <li><a href="division/division-fitout.html" data-i18n="footer.fitout">Interior Fit-Out</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 col-lg-2">

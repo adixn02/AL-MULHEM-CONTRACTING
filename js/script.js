@@ -333,7 +333,7 @@ backToTopButton.style.cssText = `
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #3b82f6;
+    background-color: #324A93;
     color: white;
     border: none;
     border-radius: 50%;
@@ -343,7 +343,7 @@ backToTopButton.style.cssText = `
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(50, 74, 147, 0.35);
 `;
 
 document.body.appendChild(backToTopButton);
@@ -366,12 +366,12 @@ backToTopButton.addEventListener('click', () => {
 });
 
 backToTopButton.addEventListener('mouseenter', () => {
-    backToTopButton.style.backgroundColor = '#1e40af';
+    backToTopButton.style.backgroundColor = '#233467';
     backToTopButton.style.transform = 'scale(1.1)';
 });
 
 backToTopButton.addEventListener('mouseleave', () => {
-    backToTopButton.style.backgroundColor = '#3b82f6';
+    backToTopButton.style.backgroundColor = '#324A93';
     backToTopButton.style.transform = 'scale(1)';
 });
 
