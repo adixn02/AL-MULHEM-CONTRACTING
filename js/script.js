@@ -88,11 +88,12 @@ if (projectsSlider && sliderPrev && sliderNext) {
 }
 
 // ===================================
-// Project Filter (Projects Page)
+// Project Filter (Projects Page only – elements may be absent on division/other pages)
 // ===================================
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
+if (filterBtns.length && projectCards.length) {
 filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
         // Remove active class from all buttons
@@ -128,48 +129,74 @@ filterBtns.forEach(btn => {
         });
     });
 });
+}
 
 // ===================================
-// Form Validation
+// Lead Form – validation & payload (Google Sheets ready)
 // ===================================
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form values
-        const firstName = document.getElementById('firstName').value.trim();
-        const lastName = document.getElementById('lastName').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
-        
-        // Validation
-        let isValid = true;
-        let errorMessage = '';
-        
-        if (firstName === '') {
+
+        var firstNameEl = document.getElementById('firstName');
+        var lastNameEl = document.getElementById('lastName');
+        var emailEl = document.getElementById('email');
+        var phoneEl = document.getElementById('phone');
+        var companyEl = document.getElementById('company');
+        var inquiryTypeEl = document.getElementById('inquiryType');
+        var sourcePageEl = document.getElementById('sourcePage');
+        var messageEl = document.getElementById('message');
+
+        var firstName = firstNameEl ? firstNameEl.value.trim() : '';
+        var lastName = lastNameEl ? lastNameEl.value.trim() : '';
+        var email = emailEl ? emailEl.value.trim() : '';
+        var phone = phoneEl ? phoneEl.value.trim() : '';
+        var company = companyEl ? companyEl.value.trim() : '';
+        var inquiryType = inquiryTypeEl ? inquiryTypeEl.value : '';
+        var sourcePage = sourcePageEl ? sourcePageEl.value : '';
+        var message = messageEl ? messageEl.value.trim() : '';
+
+        var isValid = true;
+        var errorMessage = '';
+
+        if (!firstName) {
             errorMessage += 'First name is required.\n';
             isValid = false;
         }
-        
-        if (lastName === '') {
+        if (!lastName) {
             errorMessage += 'Last name is required.\n';
             isValid = false;
         }
-        
-        if (email === '') {
+        if (!email) {
             errorMessage += 'Email is required.\n';
             isValid = false;
         } else if (!isValidEmail(email)) {
             errorMessage += 'Please enter a valid email address.\n';
             isValid = false;
         }
-        
+
         if (isValid) {
-            // Form is valid - you can submit to server here
-            alert('Thank you for contacting us! We will get back to you soon.');
+            // Lead payload – ready for Google Sheets / webhook
+            var lead = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                phone: phone || '',
+                company: company || '',
+                inquiryType: inquiryType || '',
+                sourcePage: sourcePage || '',
+                message: message || ''
+            };
+            // TODO: send to Google Sheets (e.g. fetch to Apps Script or form endpoint)
+            if (typeof window.sendLeadToSheets === 'function') {
+                window.sendLeadToSheets(lead);
+            }
+            var lang = localStorage.getItem('siteLang') || 'en';
+            var t = window.SITE_TRANSLATIONS && window.SITE_TRANSLATIONS[lang];
+            var msg = (t && t['leadform.success']) ? t['leadform.success'] : 'Thank you! We will get back to you soon.';
+            alert(msg);
             contactForm.reset();
         } else {
             alert(errorMessage);
@@ -177,9 +204,8 @@ if (contactForm) {
     });
 }
 
-// Email validation helper function
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
@@ -225,34 +251,36 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', reveal);
 
 // ===================================
-// Sticky Header on Scroll
+// Sticky Header on Scroll (only when .main-header exists, e.g. index)
 // ===================================
 let lastScroll = 0;
 const header = document.querySelector('.main-header');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+        }
+        lastScroll = currentScroll;
+    });
+}
 
 // ===================================
-// Active Navigation Link
+// Active Navigation Link (both .nav-menu a and Bootstrap .nav-link)
 // ===================================
 const currentLocation = window.location.pathname.split('/').pop() || 'index.html';
-const navLinks = document.querySelectorAll('.nav-menu a');
+const navMenuLinks = document.querySelectorAll('.nav-menu a');
+const navLinks = navMenuLinks.length ? navMenuLinks : document.querySelectorAll('.navbar .nav-link[href]');
 
 navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    if (linkPath === currentLocation || 
-        (currentLocation === '' && linkPath === 'index.html') ||
-        (linkPath !== 'index.html' && currentLocation.includes(linkPath.replace('.html', '')))) {
+    const linkPath = link.getAttribute('href') || '';
+    const pathFile = linkPath.split('/').pop().replace(/^#.*/, '') || linkPath;
+    if (pathFile === currentLocation ||
+        (currentLocation === '' && pathFile === 'index.html') ||
+        (pathFile && pathFile !== 'index.html' && currentLocation.indexOf(pathFile.replace('.html', '')) !== -1)) {
         link.classList.add('active');
     }
 });
@@ -394,6 +422,30 @@ dropdownToggles.forEach(toggle => {
                 dropdownMenu.style.display = 'none';
             }
         }
+    });
+});
+
+// ===================================
+// Our Services carousel – 2s auto-rotate, pause only when hovering slide content (not nav buttons)
+// ===================================
+document.addEventListener('DOMContentLoaded', function () {
+    var carouselEl = document.getElementById('servicesCarousel');
+    var carouselInner = carouselEl && carouselEl.querySelector('.carousel-inner');
+    if (!carouselInner || !carouselEl || typeof bootstrap === 'undefined') return;
+
+    function getCarousel() {
+        return bootstrap.Carousel.getInstance(carouselEl) || new bootstrap.Carousel(carouselEl);
+    }
+
+    // Pause only when hovering the slide content; nav buttons are outside .carousel-inner so clicking them won't keep carousel paused
+    carouselInner.addEventListener('mouseenter', function () {
+        var carousel = getCarousel();
+        if (carousel) carousel.pause();
+    });
+
+    carouselInner.addEventListener('mouseleave', function () {
+        var carousel = getCarousel();
+        if (carousel) carousel.cycle();
     });
 });
 

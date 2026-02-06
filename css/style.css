@@ -9,9 +9,20 @@
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    min-height: 100%;
 }
 body {
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Footer always visible: stick to bottom when content is short, flow after content when long */
+body .site-footer {
+    margin-top: auto;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 /* Custom scrollbar – brand primary blue */
@@ -177,15 +188,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Our Services – 70vh slider, dark theme */
+/* Our Services – 85vh, dark theme, content visible */
 .services-slider-section {
-    min-height: 70vh;
-    background: #1e293b; /* dark slate – matches reference; use var(--brand-primary-dark) for more brand blue */
+    height: 85vh;
+    min-height: 85vh;
+    max-height: 85vh;
+    background: #1e293b; /* dark slate */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1.5rem;
+    overflow: hidden;
 }
 .services-section-heading {
     font-size: clamp(2rem, 5vw, 3.25rem);
@@ -196,28 +210,78 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     text-align: center;
     width: 100%;
+    flex-shrink: 0;
+}
+/* Blur background wraps only the two boxes (carousel), not the heading */
+.services-blur-wrap {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    margin: 0 1rem 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+@media (min-width: 992px) {
+    .services-blur-wrap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 1.25rem;
+    }
 }
 .services-slider-section .carousel {
     flex: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 0;
 }
-.services-slider-section .carousel,
-.services-slider-section .carousel-inner {
-    min-height: 70vh;
+.services-blur-wrap .carousel {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
-.services-slider-section .carousel-item {
-    min-height: 70vh;
-    height: 70vh;
-    padding: 0.75rem 0 3rem;
-}
-.services-slider-section .carousel-inner {
+.services-blur-wrap .carousel-inner {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
     align-items: stretch;
 }
+.services-slider-section .carousel-item.active {
+    height: 100%;
+    min-height: 0;
+    padding: 0.75rem 0 3rem;
+    display: flex;
+    align-items: stretch;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+/* Only the active slide is visible; Bootstrap toggles .active */
+.services-blur-wrap .carousel-item:not(.active) {
+    display: none !important;
+}
+.services-blur-wrap .carousel-item.active {
+    display: flex !important;
+    flex-direction: column;
+    min-height: 0;
+}
 .services-slider-section .carousel-item .container {
+    width: 100%;
     max-width: 100%;
     height: 100%;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     padding-left: 0.75rem;
@@ -226,6 +290,10 @@ h1, h2, h3, h4, h5, h6 {
 .services-slider-section .carousel-item .services-slide-row {
     flex: 1;
     min-height: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
 }
 @media (min-width: 992px) {
     .services-slider-section .carousel-item .container {
@@ -237,31 +305,82 @@ h1, h2, h3, h4, h5, h6 {
     align-items: stretch;
     gap: 0;
 }
-.services-slider-section .services-slide-row .col-lg-6:first-child {
+/* Left box 65%, right box 35% on desktop */
+.services-slider-section .services-slide-row .services-box-left {
+    flex: 0 0 65%;
+    max-width: 65%;
+    min-width: 0;
     padding-right: 0.5rem;
 }
-.services-slider-section .services-slide-row .col-lg-6:last-child {
+.services-slider-section .services-slide-row .services-box-right {
+    flex: 0 0 35%;
+    max-width: 35%;
+    min-width: 0;
     padding-left: 0.5rem;
+}
+@media (max-width: 991px) {
+    .services-slider-section .carousel-item .services-slide-row {
+        flex-wrap: wrap;
+    }
+    .services-slider-section .services-slide-row .services-box-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .services-slider-section .services-slide-row .services-box-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 0;
+    }
+}
+.services-slider-section .services-box-left {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 .services-slide-img-wrap {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    flex: 1;
+    min-height: 200px;
     height: 100%;
-    min-height: 280px;
+    width: 100%;
+    display: block;
 }
 .services-slide-img-wrap img {
     width: 100%;
     height: 100%;
+    min-height: 200px;
     object-fit: cover;
+    object-position: center;
     display: block;
+    vertical-align: middle;
+}
+.services-slider-section .services-box-right {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.services-slide-content {
+    width: 100%;
+    min-height: 0;
+    display: block;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 .services-slide-content h2 {
-    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
     font-weight: 700;
     color: #fff;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    line-height: 1.35;
+    margin: 0 0 0.75rem 0;
+    display: block;
 }
 .services-slide-content h2 .highlight {
     background: #eab308;
@@ -272,23 +391,25 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration-color: #eab308;
 }
 .services-slide-content .services-slide-desc {
-    color: rgba(255,255,255,0.9);
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.92);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0 0 0.75rem 0;
+    display: block;
 }
 .services-slide-list {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
     margin: 0;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     line-height: 1.6;
+    display: block;
 }
 .services-slide-list li {
     position: relative;
     padding-left: 1.25rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 .services-slide-list li::before {
     content: "";
@@ -341,8 +462,8 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2rem 0 3.5rem;
     }
     .services-slide-img-wrap {
-        height: 260px;
-        max-height: 40vh;
+        min-height: 200px;
+        flex: 0 0 auto;
     }
     .services-slide-content h2 {
         margin-bottom: 0.75rem;
@@ -350,6 +471,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* The Al-Mulhem Approach section */
+.howwework-heading-main,
+.howwework-heading-sub {
+    letter-spacing: -0.02em;
+}
 .approach-section {
     background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
 }
@@ -361,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 .approach-card {
-    background: var(--white);
+    background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(50, 74, 147, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -376,21 +501,92 @@ h1, h2, h3, h4, h5, h6 {
 .approach-card .card-body .approach-icon-wrap {
     width: 72px;
     height: 72px;
-    background: rgba(50, 74, 147, 0.1);
-    color: var(--brand-primary);
+    background: #c5d4f0;
     font-size: 1.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+}
+.approach-card .approach-icon {
+    color: var(--brand-primary);
 }
 .approach-card-title {
     color: var(--text-dark);
+    font-size: 1.125rem;
 }
 .approach-card-text {
     font-size: 0.9375rem;
     line-height: 1.6;
+}
+
+/* How we work section - four circular cards + diagonal corner */
+.howwework-section {
+    background: #fff;
+    overflow: hidden;
+}
+.howwework-overline {
+    letter-spacing: 0.12em;
+    color: var(--brand-primary) !important;
+}
+.howwework-title {
+    color: var(--brand-primary);
+    letter-spacing: -0.02em;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.howwework-card-title {
+    color: var(--brand-primary);
+}
+.howwework-img-wrap {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+@media (min-width: 768px) {
+    .howwework-img-wrap {
+        width: 180px;
+        height: 180px;
+    }
+}
+.howwework-card-text {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+}
+@media (min-width: 768px) {
+    .howwework-card-text {
+        font-size: 0.875rem;
+    }
+}
+.howwework-corner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 120px 280px;
+    border-color: transparent transparent var(--brand-primary) transparent;
+    z-index: 0;
+}
+@media (min-width: 768px) {
+    .howwework-corner {
+        border-width: 0 0 160px 380px;
+    }
+}
+.howwework-logo-wrap {
+    z-index: 1;
+    padding: 0 0 12px 16px;
+}
+.howwework-logo {
+    width: 48px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+@media (min-width: 768px) {
+    .howwework-logo {
+        width: 56px;
+    }
 }
 
 /* Main hero - showroom style (below header) */
@@ -712,6 +908,62 @@ h1, h2, h3, h4, h5, h6 {
     .chairman-meta h3 { font-size: 1.125rem; }
 }
 
+/* Specialized Divisions - horizontal scroll, 30% width, 400px height */
+.divisions-slider {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+}
+.divisions-slider::-webkit-scrollbar {
+    height: 8px;
+}
+.divisions-slider::-webkit-scrollbar-track {
+    background: #e9ecef;
+    border-radius: 4px;
+}
+.divisions-slider::-webkit-scrollbar-thumb {
+    background: var(--brand-primary);
+    border-radius: 4px;
+}
+.divisions-slider-item {
+    flex: 0 0 30%;
+    min-width: 280px;
+}
+.divisions-card-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+.divisions-card-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+.divisions-card-link .card {
+    height: 100%;
+}
+.divisions-section .division-card {
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+}
+.divisions-section .division-card .card-img-top {
+    flex: 0 0 400px;
+    min-height: 400px;
+}
+.divisions-section .division-card .card-body {
+    flex: 1;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+}
+
 /* Glass cards for Specialized Divisions */
 .divisions-section .glass-card {
     background: rgba(255,255,255,0.56);
@@ -745,6 +997,18 @@ h1, h2, h3, h4, h5, h6 {
 .divisions-section .btn-primary {
     background: linear-gradient(135deg, var(--brand-primary), var(--brand-primary-dark));
     border-color: transparent;
+}
+@media (max-width: 991px) {
+    .divisions-slider-item {
+        flex: 0 0 45%;
+        min-width: 260px;
+    }
+}
+@media (max-width: 576px) {
+    .divisions-slider-item {
+        flex: 0 0 85%;
+        min-width: 240px;
+    }
 }
 
 /* Project slider overlay - blue gradient */
@@ -942,12 +1206,30 @@ h1, h2, h3, h4, h5, h6 {
 .contact-company-details a:hover {
     text-decoration: underline;
 }
-/* Contact form - brand color background, rounded corners */
+/* Contact form - same gradient as DEPENDABLE DELIVERY section */
 .contact-form-wrap {
-    background: var(--brand-primary);
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
     padding: 1.75rem 1.75rem 2rem;
+    padding-bottom: 2rem;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(50, 74, 147, 0.2);
+    box-shadow: 0 8px 24px rgba(50, 74, 147, 0.25);
+    overflow: visible;
+}
+.contact-form-wrap .lead-form {
+    overflow: visible;
+}
+.lead-form-submit-row {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    display: block !important;
+    visibility: visible !important;
+}
+.lead-form-submit-row button[type="submit"] {
+    min-height: 44px;
+    visibility: visible !important;
+    display: inline-block !important;
+    color: #fff !important;
+    font-size: 1rem;
 }
 .contact-form-wrap .form-control,
 .contact-form-wrap .form-select {
@@ -961,15 +1243,35 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 .contact-form-wrap .btn-primary {
-    background: #fff;
-    color: var(--brand-primary);
+    background-color: var(--brand-primary) !important;
+    border-color: var(--brand-primary) !important;
+    color: #fff !important;
     border: none;
     border-radius: 10px;
     font-weight: 600;
 }
 .contact-form-wrap .btn-primary:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--brand-primary-dark);
+    background-color: var(--brand-primary-dark) !important;
+    border-color: var(--brand-primary-dark) !important;
+    color: #fff !important;
+}
+
+/* Lead form – labels and titles (Al-Mulhem lead capture, Google Sheets ready) */
+.lead-form-wrap .lead-form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0;
+}
+.lead-form-wrap .lead-form-desc {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0;
+}
+.lead-form-wrap .lead-form-label {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.35rem;
 }
 /* Google Map full width below contact */
 .contact-map-wrap {
@@ -1278,4 +1580,148 @@ img {
 .projects-slider::-webkit-scrollbar-thumb {
     background: var(--brand-primary);
     border-radius: 4px;
+}
+
+/* Projects page: intro, filter, cards */
+.projects-intro {
+    background: #fff;
+}
+.projects-intro-overline {
+    letter-spacing: 0.12em;
+    color: var(--brand-primary) !important;
+    text-align: center;
+    display: block;
+}
+.projects-intro-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    color: var(--text-dark);
+}
+.projects-page-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(50, 74, 147, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.projects-page-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(50, 74, 147, 0.14);
+}
+.projects-page-card-img {
+    height: 240px;
+    background: #f1f5f9;
+}
+.projects-page-card-img img {
+    transition: transform 0.4s ease;
+}
+.projects-page-card:hover .projects-page-card-img img {
+    transform: scale(1.06);
+}
+.projects-page-card-badge {
+    letter-spacing: 0.02em;
+}
+.projects-grid-section .filter-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 2px solid var(--brand-primary);
+    background: transparent;
+    color: var(--brand-primary);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.projects-grid-section .filter-btn:hover,
+.projects-grid-section .filter-btn.active {
+    background: var(--brand-primary);
+    color: #fff;
+    border-color: var(--brand-primary);
+}
+
+/* Key Projects section on index - cards link to projects page */
+.key-projects-section .project-item {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(50, 74, 147, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.key-projects-section .project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(50, 74, 147, 0.15);
+}
+.key-projects-section .project-overlay {
+    background: linear-gradient(to top, rgba(50, 74, 147, 0.9), transparent);
+    border-radius: 0 0 12px 12px;
+}
+
+/* Division inner pages: overview + services grid */
+.division-overview {
+    padding: 3rem 0;
+    background: #fff;
+}
+.division-overview .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.division-overview h2 {
+    color: var(--brand-primary-hex, #324A93);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.division-overview .division-tagline {
+    color: var(--brand-primary-hex);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.division-overview p {
+    color: #495057;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin: 0;
+}
+.division-services {
+    padding: 3rem 0 4rem;
+    background: #f8f9fa;
+}
+.division-services h2 {
+    text-align: center;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+.division-service-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.75rem;
+    height: 100%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.division-service-card:hover {
+    box-shadow: 0 8px 24px rgba(50, 74, 147, 0.12);
+    transform: translateY(-2px);
+}
+.division-service-card .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(50, 74, 147, 0.12), rgba(50, 74, 147, 0.06));
+    color: var(--brand-primary-hex, #324A93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+.division-service-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+.division-service-card p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 0;
+    line-height: 1.5;
 }
