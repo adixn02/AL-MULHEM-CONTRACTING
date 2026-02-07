@@ -37,6 +37,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/brandlogo/logo.png">
     <link rel="apple-touch-icon" href="images/brandlogo/logo.png">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,6 +53,9 @@
     <!-- BreadcrumbList Schema for SEO -->
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.al-mulhem.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://www.al-mulhem.com/about.html"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"AboutPage","name":"About Al-Mulhem Contracting","description":"Learn about Al-Mulhem Contracting's history, mission, and commitment to construction excellence.","url":"https://www.al-mulhem.com/about.html","mainEntity":{"@type":"Organization","name":"Al-Mulhem Contracting","url":"https://www.al-mulhem.com","foundingDate":"2002"}}
     </script>
 </head>
 
@@ -72,17 +76,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">HOME</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="nav.about">ABOUT</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav.projects">KEY PROJECTS</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="divisions.html" data-bs-toggle="dropdown" data-i18n="nav.divisions">SPECIALIZED DIVISIONS</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="division/division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
-                            <li><a class="dropdown-item" href="division/division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
-                            <li><a class="dropdown-item" href="division/division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
-                            <li><a class="dropdown-item" href="division/division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
-                            <li><a class="dropdown-item" href="division/division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
-                            <li><a class="dropdown-item" href="division/division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">OUR SERVICES</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">CONTACT</a></li>
                     <li class="nav-item dropdown">
                         <button class="btn btn-outline-secondary d-flex align-items-center gap-2 px-3 py-2" type="button" id="langSwitcher" data-bs-toggle="dropdown" aria-expanded="false" title="Language">
@@ -117,54 +111,45 @@
     <!-- Our Story -->
     <section class="py-5 bg-light">
         <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-2" data-i18n="about.story.title">Our Story</h2>
+            <h2 class="text-center fw-bold text-dark mb-2" data-i18n="about.story.title">ABOUT COMPANY</h2>
             <p class="lead text-center text-body-secondary mb-5" data-i18n="about.story.lead">Building Excellence Since 2002</p>
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
-                    <p class="text-body-secondary" data-i18n="about.story.para1">Al-Mulhem Contracting Company was established with a vision to transform the construction industry through innovation, quality, and unwavering commitment to client satisfaction. From our inception in 2002, we recognized the need for a contractor that could combine technical expertise with a genuine understanding of client needs.</p>
-                    <p class="text-body-secondary" data-i18n="about.story.para2">Over the years, we have evolved from a specialized contractor to a comprehensive construction solutions provider. Our journey has been marked by continuous learning, adaptation to emerging technologies, and a steadfast commitment to sustainable building practices. We've built our reputation project by project, relationship by relationship.</p>
-                    <p class="text-body-secondary mb-0" data-i18n="about.story.para3">Today, Al-Mulhem stands as a trusted name in the construction industry, known for delivering complex projects on time and within budget while maintaining the highest standards of quality and safety. Our portfolio spans commercial, residential, hospitality, and infrastructure projects, each bearing the hallmark of our dedication to excellence.</p>
+                    <p class="text-body-secondary" data-i18n="about.story.para1">AL-MULHEM Contracting Company is your trusted partner in creating exceptional spaces and impactful experiences. Since our inception, we have combined innovation, craftsmanship, and dedication to deliver projects that shape communities and inspire people.</p>
+                    <p class="text-body-secondary mb-0" data-i18n="about.story.para2">WE ARE COMMITTED TO LEADING THE CONSTRUCTION SECTOR BY: Providing exceptional services through a skilled and passionate team. Attracting, developing, and retaining top talent. Continuously innovating with customer-centric solutions. Delivering quality with integrity and reliability.</p>
                 </div>
                 <div class="col-lg-5">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop"
-                        alt="Al-Mulhem History" class="rounded shadow w-100">
+                    <img src="Images/main-section.jpg"
+                        alt="Al-Mulhem History" class="rounded shadow w-100" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission, Vision, Values -->
+    <!-- Mission, Vision, Strategy -->
     <section class="about-mvv-section py-5">
         <div class="container py-4">
-            <h2 class="about-mvv-heading text-center mb-5" data-i18n="about.mvv.heading">Our Mission, Vision & Values</h2>
+            <h2 class="about-mvv-heading text-center mb-5" data-i18n="about.mvv.heading">Our Mission, Vision & Strategy</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="about-mvv-card card border-0 h-100 text-center p-4">
                         <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">🎯</div>
                         <h3 class="about-mvv-title" data-i18n="about.mvv.mission">Our Mission</h3>
-                        <p class="about-mvv-text mb-0" data-i18n="about.mvv.mission_para">To deliver exceptional construction solutions that
-                            exceed client expectations through innovation, quality craftsmanship, and sustainable
-                            practices. We are committed to building lasting relationships based on trust, integrity, and
-                            superior performance.</p>
+                        <p class="about-mvv-text mb-0" data-i18n="about.mvv.mission_para">To deliver innovative, sustainable, and high-quality construction solutions that exceed client expectations, strengthen communities, and contribute to economic growth.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="about-mvv-card card border-0 h-100 text-center p-4">
                         <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">🔭</div>
                         <h3 class="about-mvv-title" data-i18n="about.mvv.vision">Our Vision</h3>
-                        <p class="about-mvv-text mb-0" data-i18n="about.mvv.vision_para">To be the region's most respected and preferred
-                            construction partner, recognized for our innovative solutions, environmental stewardship,
-                            and positive impact on the communities we serve.</p>
+                        <p class="about-mvv-text mb-0" data-i18n="about.mvv.vision_para">To be a recognized leader in construction, known for iconic projects, sustainable practices, and lasting relationships built on trust, quality, and innovation.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="about-mvv-card card border-0 h-100 text-center p-4">
-                        <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">💎</div>
-                        <h3 class="about-mvv-title" data-i18n="about.mvv.values">Our Values</h3>
-                        <p class="about-mvv-text mb-0" data-i18n="about.mvv.values_para">Integrity, Excellence, Innovation, Sustainability,
-                            Collaboration, and Safety form the foundation of everything we do. These values guide our
-                            decisions, shape our culture, and define how we interact with clients, partners, and team
-                            members.</p>
+                        <div class="about-mvv-icon-wrap rounded-circle d-inline-flex align-items-center justify-content-center mb-3">📊</div>
+                        <h3 class="about-mvv-title" data-i18n="about.mvv.strategy">Our Strategy</h3>
+                        <p class="about-mvv-text mb-0" data-i18n="about.mvv.strategy_para">We focus on regional expansion, client-centric solutions, and continuous innovation in construction services. By leveraging advanced technologies and industry expertise, we deliver projects that balance efficiency, sustainability, and value creation.</p>
                     </div>
                 </div>
             </div>
@@ -251,6 +236,11 @@
 
     </main>
 
+    <!-- Above Footer Image -->
+    <div class="footer-abv">
+        <img src="Images/above_footer.png" alt="Al-Mulhem Contracting" loading="lazy">
+    </div>
+
     <!-- Footer - Perini-style multi-column (same as index) -->
     <footer class="site-footer">
         <div class="footer-main bg-white py-5">
@@ -259,7 +249,7 @@
                     <!-- Brand column -->
                     <div class="col-lg-3 col-md-6">
                         <a href="index.html" class="footer-brand d-flex align-items-center gap-2 mb-3">
-                            <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="footer-logo">
+                            <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="footer-logo" loading="lazy">
                             <span data-i18n="brand.name">AL-MULHEM CONTRACTING</span>
                         </a>
                         <p class="footer-about text-body small mb-3" data-i18n="footer.about">Al-Mulhem has more than two decades of combined experience and we value the traditions of the past. We also keep our vision firmly placed on the here and now—delivering excellence in building envelope and facade construction.</p>
@@ -280,14 +270,14 @@
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 col-lg-2">
-                            <h4 class="footer-heading" data-i18n="footer.divisions">OUR DIVISIONS</h4>
+                            <h4 class="footer-heading" data-i18n="footer.services">OUR SERVICES</h4>
                             <ul class="footer-links list-unstyled small mb-0">
-                                <li><a href="divisions.html" data-i18n="footer.all_divisions">All Divisions</a></li>
-                                <li><a href="division/division-precast.html" data-i18n="footer.precipast">Precast Composites</a></li>
-                                <li><a href="division/division-waterproofing.html" data-i18n="footer.waterproofing">Waterproofing</a></li>
-                                <li><a href="division/division-steel.html" data-i18n="footer.steel">Steel & Metal</a></li>
-                                <li><a href="division/division-landscaping.html" data-i18n="footer.landscaping">Landscaping</a></li>
-                                <li><a href="division/division-fitout.html" data-i18n="footer.fitout">Interior Fit-Out</a></li>
+                                <li><a href="services.html" data-i18n="footer.all_services">All Services</a></li>
+                                <li><a href="services/grc.html" data-i18n="footer.svc_grc">GRC</a></li>
+                                <li><a href="services/grp.html" data-i18n="footer.svc_grp">GRP</a></li>
+                                <li><a href="services/fabrication-metals.html" data-i18n="footer.svc_metal">Metal Fabrication</a></li>
+                                <li><a href="services/steel.html" data-i18n="footer.svc_steel">Steel Works</a></li>
+                                <li><a href="services/civil-works.html" data-i18n="footer.svc_civil">Civil Works</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 col-lg-2">

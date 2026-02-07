@@ -204,6 +204,25 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1.5rem;
     overflow: hidden;
 }
+/* Force LTR for the carousel in RTL pages so Bootstrap carousel and slide layout display correctly */
+[dir="rtl"] .services-blur-wrap {
+    direction: ltr;
+    text-align: left;
+}
+[dir="rtl"] .services-blur-wrap .services-slide-content,
+[dir="rtl"] .services-blur-wrap .services-slide-content h2,
+[dir="rtl"] .services-blur-wrap .services-slide-list,
+[dir="rtl"] .services-blur-wrap .services-slide-list li {
+    text-align: left;
+}
+[dir="rtl"] .services-blur-wrap .services-slide-list li {
+    padding-left: 1.25rem;
+    padding-right: 0;
+}
+[dir="rtl"] .services-blur-wrap .services-slide-list li::before {
+    left: 0;
+    right: auto;
+}
 .services-section-heading {
     font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 800;
@@ -577,6 +596,12 @@ h1, h2, h3, h4, h5, h6 {
         border-width: 0 0 160px 380px;
     }
 }
+/* Small screens: smaller corner so it doesn't overlap stacked cards */
+@media (max-width: 575.98px) {
+    .howwework-corner {
+        border-width: 0 0 80px 160px;
+    }
+}
 .howwework-logo-wrap {
     z-index: 1;
     padding: 0 0 12px 16px;
@@ -589,6 +614,50 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
     .howwework-logo {
         width: 56px;
+    }
+}
+@media (max-width: 575.98px) {
+    .howwework-logo {
+        width: 40px;
+    }
+}
+
+/* How we work – responsive on small screens */
+@media (max-width: 575.98px) {
+    .howwework-section .container {
+        padding-bottom: 4rem;
+    }
+    .howwework-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .howwework-cards-row {
+        margin-bottom: 0.5rem;
+    }
+    .howwework-card {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .howwework-img-wrap {
+        width: 120px;
+        height: 120px;
+    }
+    .howwework-card-title {
+        font-size: 0.95rem;
+    }
+    .howwework-card-text {
+        font-size: 0.8125rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .howwework-section .container {
+        padding-bottom: 3.5rem;
+    }
+    .howwework-title {
+        font-size: 1.35rem;
     }
 }
 
@@ -795,12 +864,15 @@ h1, h2, h3, h4, h5, h6 {
     .hero-split-left {
         flex: 0 0 65%;
         max-width: 65%;
-        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-        -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        /* No clip-path on small/medium: simple rectangle to avoid white space */
+        clip-path: none;
+        -webkit-clip-path: none;
         padding: 2.5rem 2.5rem;
     }
     .hero-split-image {
         min-height: 55vh;
+        clip-path: none;
+        -webkit-clip-path: none;
     }
 }
 @media (max-width: 768px) {
@@ -1730,4 +1802,19 @@ img {
     color: #6c757d;
     margin: 0;
     line-height: 1.5;
+}
+
+/* Above Footer Image */
+.footer-abv {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    line-height: 0;
+}
+.footer-abv img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    object-position: center 40%;
+    display: block;
 }

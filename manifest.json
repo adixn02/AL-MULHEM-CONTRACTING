@@ -1,0 +1,27 @@
+{
+    "name": "Al-Mulhem Contracting",
+    "short_name": "Al-Mulhem",
+    "description": "Leading ISO-certified construction contractor specializing in GFRC facades, architectural composites, and building envelope solutions.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#324A93",
+    "orientation": "portrait-primary",
+    "lang": "en",
+    "dir": "auto",
+    "icons": [
+        {
+            "src": "images/brandlogo/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/brandlogo/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "construction"]
+}

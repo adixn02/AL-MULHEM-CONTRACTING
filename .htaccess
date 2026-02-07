@@ -23,6 +23,9 @@
   </FilesMatch>
 </IfModule>
 
+# Custom 404 page
+ErrorDocument 404 /404.html
+
 # Optional: compress text assets
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml

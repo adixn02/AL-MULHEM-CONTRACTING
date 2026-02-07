@@ -38,6 +38,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/brandlogo/logo.png" sizes="any">
     <link rel="apple-touch-icon" href="images/brandlogo/logo.png">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -142,17 +143,7 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html" data-i18n="nav.home">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">ABOUT</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav.projects">KEY PROJECTS</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="divisions.html" data-bs-toggle="dropdown" data-i18n="nav.divisions">SPECIALIZED DIVISIONS</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="division/division-precast.html" data-i18n="nav.div_precast">Architectural Precast Composites</a></li>
-                            <li><a class="dropdown-item" href="division/division-waterproofing.html" data-i18n="nav.div_waterproofing">Waterproofing & Concrete Repair</a></li>
-                            <li><a class="dropdown-item" href="division/division-steel.html" data-i18n="nav.div_steel">Steel Fabrication & Metal Works</a></li>
-                            <li><a class="dropdown-item" href="division/division-landscaping.html" data-i18n="nav.div_landscaping">Landscaping & Outdoor Development</a></li>
-                            <li><a class="dropdown-item" href="division/division-industrial.html" data-i18n="nav.div_industrial">Industrial Solutions</a></li>
-                            <li><a class="dropdown-item" href="division/division-fitout.html" data-i18n="nav.div_fitout">Interior Fit-Out Solutions</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav.services">OUR SERVICES</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">CONTACT</a></li>
                     <li class="nav-item dropdown">
                         <button class="btn btn-outline-secondary d-flex align-items-center gap-2 px-3 py-2" type="button" id="langSwitcher" data-bs-toggle="dropdown" aria-expanded="false" title="Language">
@@ -222,19 +213,19 @@
                 <div class="hero-split-content">
                     <div class="hero-split-logo">
                         <!-- <img src="images/brandlogo/logo.png" alt="Al-Mulhem" class="hero-split-logo-img"> -->
-                        <span class="hero-split-logo-text">AL MULHEM</span>
+                        <span class="hero-split-logo-text" data-i18n="index.hero_split.logo_text">AL MULHEM</span>
                     </div>
                     <h1 class="hero-split-headline">
-                        <span class="d-block">Khalid bin Mohammed</span>
-                        <span class="d-block">bin Othman Al-Mulhem</span>
-                        <span class="d-block">Contracting Establishment</span>
+                        <span class="d-block" data-i18n="index.hero_split.name1">Khalid bin Mohammed</span>
+                        <span class="d-block" data-i18n="index.hero_split.name2">bin Othman Al-Mulhem</span>
+                        <span class="d-block" data-i18n="index.hero_split.establishment">Contracting Establishment</span>
                     </h1>
                     <!-- <div class="hero-split-year-box">2025</div> -->
                     <p class="hero-split-tagline" data-i18n="index.hero_split.tagline">"Where Construction Meets Reality"</p>
                 </div>
             </div>
             <div class="hero-split-right">
-                <img src="Images/main-section.jpg" alt="Al-Mulhem Contracting - Modern construction and architecture" class="hero-split-image">
+                <img src="Images/main-section.jpg" alt="Al-Mulhem Contracting - Modern construction and architecture" class="hero-split-image" loading="lazy">
             </div>
         </div>
     </section>
@@ -244,7 +235,7 @@
         <div class="container py-4">
             <h2 class="text-center fw-bold text-primary mb-5" data-i18n="index.section.divisions">OUR SPECIALIZED DIVISIONS</h2>
             <div class="divisions-slider">
-                <a href="division/division-precast.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Architectural Precast Composites">
+                <a href="services/grc.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Architectural Precast Composites">
                     <div class="card border-0 shadow-sm overflow-hidden card-hover glass-card division-card">
                         <div class="card-img-top overflow-hidden">
                             <img src="Images/ArchitecturalPrecastComposites.jpg"
@@ -256,7 +247,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="division/division-waterproofing.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Waterproofing & Concrete Repair">
+                <a href="services/mep.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Waterproofing & Concrete Repair">
                     <div class="card border-0 shadow-sm overflow-hidden card-hover glass-card division-card">
                         <div class="card-img-top overflow-hidden">
                             <img src="Images/Waterproofing&ConcreteRepair.jpg"
@@ -268,7 +259,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="division/division-steel.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Steel Fabrication & Metal Works">
+                <a href="services/steel.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Steel Fabrication & Metal Works">
                     <div class="card border-0 shadow-sm overflow-hidden card-hover glass-card division-card">
                         <div class="card-img-top overflow-hidden">
                             <img src="Images/SteelFabrication&MetalWorks.jpg"
@@ -280,7 +271,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="division/division-fitout.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Interior Fit-Out Solutions">
+                <a href="services/signage.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Interior Fit-Out Solutions">
                     <div class="card border-0 shadow-sm overflow-hidden card-hover glass-card division-card">
                         <div class="card-img-top overflow-hidden">
                             <img src="Images/InteriorFit-OutSolutions.jpg" class="w-100 h-100 object-fit-cover img-zoom"
@@ -292,7 +283,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="division/division-landscaping.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Landscaping & Outdoor Development">
+                <a href="services/civil-works.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Landscaping & Outdoor Development">
                     <div class="card border-0 shadow-sm overflow-hidden card-hover glass-card division-card">
                         <div class="card-img-top overflow-hidden">
                             <img src="Images/Landscaping&OutdoorDevelopment%20.jpg"
@@ -304,7 +295,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="division/division-industrial.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Industrial Solutions">
+                <a href="services/grp.html" class="divisions-slider-item divisions-card-link" aria-label="Learn more about Industrial Solutions">
                     <div class="card border-0 shadow-sm overflow-hidden card-hover glass-card division-card">
                         <div class="card-img-top overflow-hidden">
                             <img src="Images/IndustrialGRP.jpg" class="w-100 h-100 object-fit-cover img-zoom"
@@ -326,52 +317,52 @@
             <h2 class="text-center fw-bold text-dark mb-2" data-i18n="index.section.projects">KEY PROJECTS</h2>
             <p class="text-center text-body-secondary col-lg-7 mx-auto mb-4" data-i18n="index.projects.lead">Explore our portfolio of landmark projects across commercial, residential, and hospitality sectors.</p>
             <div class="projects-slider d-flex gap-3 overflow-auto pb-3 mb-3">
-                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none"
-                    style="min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop"
-                        alt="Commercial Tower - Al-Mulhem project" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Dior%20Boutique%20Naqeel%20mall%20Riyadh_1.png" alt="Dior Boutique Naqeel Mall Riyadh" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
                     <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
-                        <h3 class="h6 mb-0 fw-bold" data-i18n="index.project.financial">Financial Tower</h3>
+                        <h3 class="h6 mb-0 fw-bold">Dior Boutique Naqeel Mall Riyadh</h3>
                     </div>
                 </a>
-                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none"
-                    style="min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
-                        alt="Luxury Hotel - Al-Mulhem project" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Amaala-Triple%20Bay%20Six%20Senses%20Builder%20Works%20Package%20(Fit-outs)_1.png" alt="Amaala - Triple Bay Six Senses" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
                     <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
-                        <h3 class="h6 mb-0 fw-bold" data-i18n="index.project.hotel">Luxury Hotel Complex</h3>
+                        <h3 class="h6 mb-0 fw-bold">Amaala - Six Senses (Fit-outs)</h3>
                     </div>
                 </a>
-                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none"
-                    style="min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop"
-                        alt="Residential project - Al-Mulhem" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Neom%20Community%20School(Signages)_1.png" alt="Neom Community School (Signages)" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
                     <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
-                        <h3 class="h6 mb-0 fw-bold" data-i18n="index.project.residential">Residential Towers</h3>
+                        <h3 class="h6 mb-0 fw-bold">Neom Community School (Signages)</h3>
                     </div>
                 </a>
-                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none"
-                    style="min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=400&h=300&fit=crop"
-                        alt="Shopping Mall - Al-Mulhem project" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Al-Ula%20Resort%20(MEP)_1.png" alt="Al-Ula Resort (MEP)" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
                     <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
-                        <h3 class="h6 mb-0 fw-bold" data-i18n="index.project.shopping">Shopping Complex</h3>
+                        <h3 class="h6 mb-0 fw-bold">Al-Ula Resort (MEP)</h3>
                     </div>
                 </a>
-                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none"
-                    style="min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop"
-                        alt="Restaurant project - Al-Mulhem" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Seven%20Entertainment%20complex%20Yanbu%20(Fit-Out%20Scope)_1.png" alt="Seven Entertainment Yanbu" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
                     <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
-                        <h3 class="h6 mb-0 fw-bold" data-i18n="index.project.restaurant">Fine Dining Restaurant</h3>
+                        <h3 class="h6 mb-0 fw-bold">Seven Entertainment Yanbu (Fit-Out)</h3>
                     </div>
                 </a>
-                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none"
-                    style="min-width: 300px;">
-                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=400&h=300&fit=crop"
-                        alt="Office Complex - Al-Mulhem project" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Al-Mulhem%20Tower%20(%20Interior)_1.png" alt="Al-Mulhem Tower (Interior)" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
                     <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
-                        <h3 class="h6 mb-0 fw-bold" data-i18n="index.project.corporate">Corporate Headquarters</h3>
+                        <h3 class="h6 mb-0 fw-bold">Al-Mulhem Tower (Interior)</h3>
+                    </div>
+                </a>
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Diriyah%20Season(%20Interior%20)_1.png" alt="Diriyah Season (Interior)" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                    <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
+                        <h3 class="h6 mb-0 fw-bold">Diriyah Season (Interior)</h3>
+                    </div>
+                </a>
+                <a href="projects.html" class="project-item flex-shrink-0 position-relative rounded overflow-hidden text-decoration-none" style="min-width: 300px;">
+                    <img src="Images/projects/Bayut%20Educational%20Academy%20(%20Interior)_1.png" alt="Bayut Educational Academy (Interior)" class="w-100" style="height: 300px; object-fit: cover;" loading="lazy" decoding="async">
+                    <div class="project-overlay position-absolute bottom-0 start-0 end-0 p-3 text-white">
+                        <h3 class="h6 mb-0 fw-bold">Bayut Educational Academy (Interior)</h3>
                     </div>
                 </a>
             </div>
@@ -782,9 +773,8 @@
             </div>
 
             <h2 class="howwework-title display-6 fw-bold text-center mb-5 mb-lg-6" data-i18n="index.howwework.main">We provide solutions for Construction, Management, and Restoration</h2>
-            <div class="row g-4 g-lg-5 justify-content-center">
-                
-                <div class="col-6 col-md-3">
+            <div class="row g-4 g-lg-5 justify-content-center howwework-cards-row">
+                <div class="col-12 col-sm-6 col-md-3">
                     <article class="howwework-card text-center">
                         <div class="howwework-img-wrap rounded-circle overflow-hidden mx-auto mb-3">
                             <img src="Images/main-section.jpg" alt="General Construction" loading="lazy" class="w-100 h-100 object-fit-cover">
@@ -793,7 +783,7 @@
                         <p class="howwework-card-text small text-body-secondary mb-0" data-i18n="index.howwework.general.para">General construction involves the process of planning, designing, and building structures or infrastructure, and it encompasses various phases and disciplines.</p>
                     </article>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <article class="howwework-card text-center">
                         <div class="howwework-img-wrap rounded-circle overflow-hidden mx-auto mb-3">
                             <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=400&fit=crop" alt="Educational Institutes" loading="lazy" class="w-100 h-100 object-fit-cover">
@@ -802,7 +792,7 @@
                         <p class="howwework-card-text small text-body-secondary mb-0" data-i18n="index.howwework.education.para">Construction for educational institutes involves creating functional, safe, and innovative learning environments.</p>
                     </article>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <article class="howwework-card text-center">
                         <div class="howwework-img-wrap rounded-circle overflow-hidden mx-auto mb-3">
                             <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=400&fit=crop" alt="Entertainment" loading="lazy" class="w-100 h-100 object-fit-cover">
@@ -811,7 +801,7 @@
                         <p class="howwework-card-text small text-body-secondary mb-0" data-i18n="index.howwework.entertainment.para">Construction for entertainment facilities focuses on creating spaces that engage and delight audiences, while also addressing technical, aesthetic, and functional requirements.</p>
                     </article>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <article class="howwework-card text-center">
                         <div class="howwework-img-wrap rounded-circle overflow-hidden mx-auto mb-3">
                             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=400&fit=crop" alt="Health Sector" loading="lazy" class="w-100 h-100 object-fit-cover">
@@ -823,7 +813,7 @@
             </div>
         </div>
         <div class="howwework-logo-wrap position-absolute bottom-0 start-0">
-            <img src="Images/brandlogo/logo.png" alt="" class="howwework-logo" aria-hidden="true">
+            <img src="Images/brandlogo/logo.png" alt="" class="howwework-logo" aria-hidden="true" loading="lazy">
         </div>
     </section>
 
@@ -856,56 +846,77 @@
         </div>
     </section>
 
-    <!-- Our Partners and Clients - two rows with horizontal marquee -->
-    <section class="py-5 bg-light partners-clients-section">
+    <!-- Our Partners -->
+    <section class="py-5 bg-light partners-section">
         <div class="container py-4">
-            <h2 class="text-center fw-bold text-dark mb-5" data-i18n="index.section.partners_clients">Our Partners and Clients</h2>
-
-            <!-- Row 1: Partners (marquee right-to-left) -->
-            <div class="marquee-row mb-4">
+            <h2 class="text-center fw-bold text-dark mb-2" data-i18n="index.section.partners">Our Partners</h2>
+            <p class="text-center text-body-secondary mb-5 mx-auto" style="max-width:700px;" data-i18n="index.partners.desc">We collaborate with trusted international and local partners to deliver world-class solutions while maintaining alignment.</p>
+            <div class="marquee-row">
                 <div class="marquee-wrap" aria-hidden="true">
                     <div class="marquee-track marquee-track-partners">
                         <div class="marquee-inner">
-                            <div class="partner-client-logo"><img src="images/partners/fortninet.png" alt="Fortinet" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/Legrand-logo.jpg" alt="Legrand" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/norden.png" alt="Norden" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/reosenburger.png" alt="Rosenberger" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/zeta.svg" alt="Zeta" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/ZOHO_New.png" alt="Zoho" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/Zoom-Logo.jpg" alt="Zoom" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/simplex1%20(1).png" alt="Simplex" class="marquee-img"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/fortninet.png" alt="Fortinet" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/Legrand-logo.jpg" alt="Legrand" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/norden.png" alt="Norden" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/reosenburger.png" alt="Rosenberger" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/zeta.svg" alt="Zeta" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/ZOHO_New.png" alt="Zoho" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/Zoom-Logo.jpg" alt="Zoom" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/simplex1%20(1).png" alt="Simplex" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/logo.webp" alt="Partner" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/images.png" alt="Partner" class="marquee-img" loading="lazy"></div>
                         </div>
                         <div class="marquee-inner" aria-hidden="true">
-                            <div class="partner-client-logo"><img src="images/partners/fortninet.png" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/Legrand-logo.jpg" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/norden.png" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/reosenburger.png" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/zeta.svg" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/ZOHO_New.png" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/Zoom-Logo.jpg" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/partners/simplex1%20(1).png" alt="" class="marquee-img"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/fortninet.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/Legrand-logo.jpg" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/norden.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/reosenburger.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/zeta.svg" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/ZOHO_New.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/Zoom-Logo.jpg" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/simplex1%20(1).png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/logo.webp" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/partners/images.png" alt="" class="marquee-img" loading="lazy"></div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Row 2: Clients (marquee right-to-left) -->
+    <!-- Our Clients -->
+    <section class="py-5 clients-section">
+        <div class="container py-4">
+            <h2 class="text-center fw-bold text-dark mb-2" data-i18n="index.section.clients">Our Clients</h2>
+            <p class="text-center text-body-secondary mb-5 mx-auto" style="max-width:700px;" data-i18n="index.clients.desc">Our long-standing relationships with government entities, private developers, and multinational corporations are a testament to our reliability and quality of work.</p>
             <div class="marquee-row">
                 <div class="marquee-wrap" aria-hidden="true">
                     <div class="marquee-track marquee-track-clients">
                         <div class="marquee-inner">
-                            <div class="partner-client-logo"><img src="images/clients/abdil.png" alt="Abdil" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/alshaya.png" alt="Alshaya" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/neom.svg" alt="NEOM" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/tbc.avif" alt="TBC" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/1280px-Dior_Logo.svg.png" alt="Dior" class="marquee-img"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/7seven.png" alt="Seven" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/abdil.png" alt="Abdil" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/alshaya.png" alt="Alshaya" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/amaala.png" alt="Amaala" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/dior.png" alt="Dior" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/mattex.png" alt="Mattex" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/mbl.png" alt="MBL" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/neom.svg" alt="NEOM" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/redglobalsea.png" alt="Red Global Sea" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/tamimi.png" alt="Tamimi" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/tbc.avif" alt="TBC" class="marquee-img" loading="lazy"></div>
                         </div>
                         <div class="marquee-inner" aria-hidden="true">
-                            <div class="partner-client-logo"><img src="images/clients/abdil.png" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/alshaya.png" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/neom.svg" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/tbc.avif" alt="" class="marquee-img"></div>
-                            <div class="partner-client-logo"><img src="images/clients/1280px-Dior_Logo.svg.png" alt="" class="marquee-img"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/7seven.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/abdil.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/alshaya.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/amaala.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/dior.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/mattex.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/mbl.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/neom.svg" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/redglobalsea.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/tamimi.png" alt="" class="marquee-img" loading="lazy"></div>
+                            <div class="partner-client-logo"><img src="Images/clients/tbc.avif" alt="" class="marquee-img" loading="lazy"></div>
                         </div>
                     </div>
                 </div>
@@ -996,6 +1007,11 @@
 
     </main>
 
+    <!-- Above Footer Image -->
+    <div class="footer-abv">
+        <img src="Images/above_footer.png" alt="Al-Mulhem Contracting" loading="lazy">
+    </div>
+
     <!-- Footer - Perini-style multi-column -->
     <footer class="site-footer">
         <div class="footer-main bg-white py-5">
@@ -1004,7 +1020,7 @@
                     <!-- Brand column -->
                     <div class="col-lg-3 col-md-6">
                         <a href="index.html" class="footer-brand d-flex align-items-center gap-2 mb-3">
-                            <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="footer-logo">
+                            <img src="images/brandlogo/logo.png" alt="Al-Mulhem Contracting" class="footer-logo" loading="lazy">
                             <span data-i18n="brand.name">AL-MULHEM CONTRACTING</span>
                         </a>
                         <p class="footer-about text-body small mb-3" data-i18n="footer.about">Al-Mulhem has more than two decades of combined experience and we value the traditions of the past. We also keep our vision firmly placed on the here and now—delivering excellence in building envelope and facade construction.</p>
@@ -1025,14 +1041,14 @@
                             </ul>
                         </div>
                         <div class="col-6 col-md-4 col-lg-2">
-                            <h4 class="footer-heading" data-i18n="footer.divisions">OUR DIVISIONS</h4>
+                            <h4 class="footer-heading" data-i18n="footer.services">OUR SERVICES</h4>
                             <ul class="footer-links list-unstyled small mb-0">
-                                <li><a href="divisions.html" data-i18n="footer.all_divisions">All Divisions</a></li>
-                                <li><a href="division/division-precast.html" data-i18n="footer.precipast">Precast Composites</a></li>
-                                <li><a href="division/division-waterproofing.html" data-i18n="footer.waterproofing">Waterproofing</a></li>
-                                <li><a href="division/division-steel.html" data-i18n="footer.steel">Steel & Metal</a></li>
-                                <li><a href="division/division-landscaping.html" data-i18n="footer.landscaping">Landscaping</a></li>
-                                <li><a href="division/division-fitout.html" data-i18n="footer.fitout">Interior Fit-Out</a></li>
+                                <li><a href="services.html" data-i18n="footer.all_services">All Services</a></li>
+                                <li><a href="services/grc.html" data-i18n="footer.svc_grc">GRC</a></li>
+                                <li><a href="services/grp.html" data-i18n="footer.svc_grp">GRP</a></li>
+                                <li><a href="services/fabrication-metals.html" data-i18n="footer.svc_metal">Metal Fabrication</a></li>
+                                <li><a href="services/steel.html" data-i18n="footer.svc_steel">Steel Works</a></li>
+                                <li><a href="services/civil-works.html" data-i18n="footer.svc_civil">Civil Works</a></li>
                              </ul>
                         </div>
                         <div class="col-6 col-md-4 col-lg-2">

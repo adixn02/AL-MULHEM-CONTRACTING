@@ -5,27 +5,34 @@
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  X-XSS-Protection: 1; mode=block
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-# HTML: revalidate so users get updates (SW also does network-first for pages)
-/index.html
-  Cache-Control: public, max-age=0, must-revalidate
-/about.html
-  Cache-Control: public, max-age=0, must-revalidate
-/board.html
-  Cache-Control: public, max-age=0, must-revalidate
-/divisions.html
-  Cache-Control: public, max-age=0, must-revalidate
-/projects.html
+# HTML: revalidate so users get updates
+/*.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/services/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS & JS: long cache with immutable
 /css/*
   Cache-Control: public, max-age=31536000, immutable
 
 /js/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Images: long cache
 /Images/*
   Cache-Control: public, max-age=31536000, immutable
 
 /images/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Manifest & SW
+/manifest.json
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: application/manifest+json
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate

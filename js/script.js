@@ -487,8 +487,8 @@ loadingStyle.textContent = `
 `;
 document.head.appendChild(loadingStyle);
 
-// ===================================
-// Console Message
-// ===================================
-console.log('%c Al-Mulhem Contracting ', 'background: #1e3a8a; color: #ffffff; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Building Excellence Since 2005 ', 'background: #3b82f6; color: #ffffff; font-size: 14px; padding: 5px;');
+// Console branding (production-safe)
+if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    console.log('%c Al-Mulhem Contracting ', 'background: #1e3a8a; color: #ffffff; font-size: 20px; font-weight: bold; padding: 10px;');
+    console.log('%c Building Excellence Since 2005 ', 'background: #3b82f6; color: #ffffff; font-size: 14px; padding: 5px;');
+}
