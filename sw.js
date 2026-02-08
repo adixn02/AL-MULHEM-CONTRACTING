@@ -3,7 +3,7 @@
  * Production caching: static assets from cache, HTML network-first for fresh content.
  * Bump CACHE_VERSION when deploying to invalidate old caches.
  */
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE_STATIC = 'almulhem-static-' + CACHE_VERSION;
 const CACHE_PAGES = 'almulhem-pages-' + CACHE_VERSION;
 const CACHE_EXTERNAL = 'almulhem-external-' + CACHE_VERSION;
