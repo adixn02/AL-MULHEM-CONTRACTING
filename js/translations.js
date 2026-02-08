@@ -29,9 +29,9 @@ window.SITE_TRANSLATIONS = {
     'index.hero.contact_now': 'Contact now',
 
     // —— Index: Headlines ——
-    'index.intro.line1': 'YOUR VISION, OUR EXPERTISE.',
-    'index.intro.line2': 'THE PERFECT PARTNERSHIP FOR YOUR CONSTRUCTION NEEDS.',
-    'index.intro.tagline': 'Al-Mulhem - Building Trust.',
+    'index.intro.line1': 'BUILT ON PRECISION. DRIVEN BY PERFORMANCE.',
+    'index.intro.line2': 'RELIABLE SOLUTIONS FOR COMPLEX CONSTRUCTION PROJECTS.',
+    'index.intro.tagline': 'Al-Mulhem – Building Trust.',
 
     // —— Index: Split hero tagline ——
     'index.hero_split.tagline': '"Where Construction Meets Reality"',
